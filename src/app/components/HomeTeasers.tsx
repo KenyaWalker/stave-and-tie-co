@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HomeTeasers() {
   return (
-    <section className="relative w-full bg-espresso text-parchment py-18 lg:py-24">
+    <section className="relative w-full bg-espresso text-parchment pt-14 lg:pt-18 pb-10 lg:pb-12">
       <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <h2 className="display text-[clamp(2rem,4.6vw,3.8rem)] text-cream">
@@ -12,7 +12,7 @@ export default function HomeTeasers() {
             <span className="display-italic text-gilt-2">done clean.</span>
           </h2>
           <p className="text-parchment/80 max-w-[44ch] leading-[1.8]">
-            The hat visuals are now a central design cue — dark, refined, and high-end.
+            Explore product styles by collection and start a custom order in minutes.
           </p>
         </div>
 
@@ -28,12 +28,13 @@ export default function HomeTeasers() {
             cta="Browse collection"
           />
           <Card
-            href="/atelier"
-            title="The Atelier"
-            subtitle="Built by hand in Kentucky between firehouse shifts."
-            src="/photos/img_5664.jpg"
-            alt="White hat on dark wood rack with denim jacket"
-            cta="Meet the maker"
+            href="/our-story"
+            title="Meet the Maker"
+            subtitle="Crafted by a local fireman in Kentucky — premium finish, every time."
+            src="/photos/img_5927.jpg"
+            alt="Station One custom bourbon barrel head"
+            cta="Read our story"
+            imageClassName="object-[50%_48%]"
           />
         </div>
       </div>
@@ -41,7 +42,23 @@ export default function HomeTeasers() {
   );
 }
 
-function Card({ href, title, subtitle, src, alt, cta }: { href: string; title: string; subtitle: string; src: string; alt: string; cta: string }) {
+function Card({
+  href,
+  title,
+  subtitle,
+  src,
+  alt,
+  cta,
+  imageClassName = "",
+}: {
+  href: string;
+  title: string;
+  subtitle: string;
+  src: string;
+  alt: string;
+  cta: string;
+  imageClassName?: string;
+}) {
   return (
     <Link href={href} className="group block">
       <div className="relative aspect-[4/3] overflow-hidden border border-parchment/20">
@@ -50,7 +67,7 @@ function Card({ href, title, subtitle, src, alt, cta }: { href: string; title: s
           alt={alt}
           fill
           sizes="(min-width: 1024px) 50vw, 92vw"
-          className="object-cover brightness-[0.74] contrast-[1.08] saturate-[0.9] transition-transform duration-1000 group-hover:scale-105"
+          className={`object-cover brightness-[0.74] contrast-[1.08] saturate-[0.9] transition-transform duration-1000 group-hover:scale-105 ${imageClassName}`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-espresso/88 via-black/30 to-black/15" />
         <div className="absolute left-5 bottom-5 right-5">

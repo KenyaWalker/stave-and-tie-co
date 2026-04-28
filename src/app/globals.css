@@ -210,19 +210,19 @@ body {
   align-items: center;
   gap: 0.85rem;
   padding: 0.95rem 1.6rem;
-  border: 1px solid var(--gilt);
-  color: var(--gilt-2);
+  border: 1px solid var(--gilt-2);
+  color: #f2ddb0;
   font-family: var(--font-special-elite), monospace;
   font-size: 0.66rem;
   letter-spacing: 0.34em;
   text-transform: uppercase;
-  background: transparent;
+  background: rgba(16, 10, 6, 0.38);
   transition: background-color 400ms ease, color 400ms ease, border-color 400ms ease;
 }
 .btn-gilt:hover {
-  background: var(--gilt);
+  background: #ddb86a;
   color: var(--espresso);
-  border-color: var(--gilt);
+  border-color: #ddb86a;
 }
 
 .btn-ghost {
@@ -230,13 +230,13 @@ body {
   align-items: center;
   gap: 0.85rem;
   padding: 0.95rem 1.6rem;
-  border: 1px solid var(--parchment);
-  color: var(--parchment);
+  border: 1px solid rgba(236, 218, 178, 0.9);
+  color: #f3e4c1;
   font-family: var(--font-special-elite), monospace;
   font-size: 0.66rem;
   letter-spacing: 0.34em;
   text-transform: uppercase;
-  background: transparent;
+  background: rgba(16, 10, 6, 0.3);
   transition: background-color 400ms ease, color 400ms ease;
 }
 .btn-ghost:hover {

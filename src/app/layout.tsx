@@ -33,13 +33,13 @@ const allura = Allura({
 
 export const metadata: Metadata = {
   title:
-    "The Stave & Tie Co. — Atelier of Reclaimed Bourbon Barrel Wall Art | Kentucky",
+    "The Stave & Tie Co. — Luxury Reclaimed Bourbon Barrel Wall Art | Kentucky",
   description:
-    "A Kentucky atelier producing numbered, hand-engraved wall pieces from retired bourbon barrels. Each commission carved by a working firefighter — finished slow, made for one wall.",
+    "A Kentucky workshop creating hand-engraved wall pieces from retired bourbon barrels. Each commission is carved by a working firefighter — finished slow, made for one wall.",
   openGraph: {
-    title: "The Stave & Tie Co. — Atelier of Reclaimed Bourbon Barrel Wall Art",
+    title: "The Stave & Tie Co. — Luxury Reclaimed Bourbon Barrel Wall Art",
     description:
-      "A Kentucky atelier. Numbered, made-to-commission. Reclaimed white oak from the bourbon trail.",
+      "A Kentucky workshop. Made-to-commission. Reclaimed white oak from the bourbon trail.",
     type: "website",
   },
 };

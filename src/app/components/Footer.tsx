@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-3 text-parchment/60 text-xs">
           <span>© {new Date().getFullYear()} The Stave &amp; Tie Co.</span>
           <div className="flex items-center gap-5">
-            <Link href="/atelier" className="link-rule">Atelier</Link>
+            <Link href="/our-story" className="link-rule">Our Story</Link>
             <Link href="/collection" className="link-rule">Collection</Link>
             <Link href="/commission" className="link-rule">Commission</Link>
           </div>

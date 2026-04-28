@@ -8,7 +8,7 @@ const supportPhotos = [
 
 export default function FireplaceSection() {
   return (
-    <section className="relative w-full bg-char text-parchment pt-16 lg:pt-20 pb-18 lg:pb-24">
+    <section className="relative w-full bg-char text-parchment pt-8 lg:pt-10 pb-14 lg:pb-16">
       <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
         <h2 className="display text-[clamp(1.9rem,4vw,3.5rem)] text-cream max-w-[18ch]">
           Firehouse-built quality,
@@ -21,8 +21,8 @@ export default function FireplaceSection() {
         <div className="relative h-[230px] md:h-[290px] lg:h-[360px]">
           <video
             className="absolute inset-0 h-full w-full object-cover"
-            src="/video/strip-5639.mp4"
-            poster="/video/strip-5639-poster.jpg"
+            src="/video/hero-5641-v4.mp4"
+            poster="/video/hero-5641-poster.jpg"
             autoPlay
             muted
             loop
