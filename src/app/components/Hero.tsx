@@ -5,8 +5,8 @@ export default function Hero() {
     <section id="top" className="relative w-full min-h-[92svh] overflow-hidden bg-espresso text-parchment">
       <video
         className="absolute inset-0 h-full w-full object-cover"
-        src="/video/strip-5639-v4.mp4"
-        poster="/video/strip-5639-poster.jpg"
+        src="/video/hero-fireplace.mp4"
+        poster="/video/hero-fireplace-poster.jpg"
         autoPlay
         muted
         loop
