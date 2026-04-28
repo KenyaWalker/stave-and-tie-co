@@ -7,9 +7,9 @@ export default function Hero() {
       className="relative w-full min-h-[86svh] overflow-hidden bg-espresso text-cream"
     >
       <video
-        className="absolute inset-0 h-full w-full object-cover object-[50%_38%]"
-        src="/video/hero-5641-v6.mp4"
-        poster="/video/hero-5641-v6-poster.jpg"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+        src="/video/hero-montage.mp4"
+        poster="/video/hero-montage-poster.jpg"
         autoPlay
         muted
         loop
