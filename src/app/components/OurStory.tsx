@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function OurStory() {
   return (
-    <section className="grain relative w-full bg-char text-cream pt-24 lg:pt-32 pb-24 lg:pb-32">
+    <section className="grain relative w-full bg-char text-cream pt-20 lg:pt-24 pb-20 lg:pb-24">
       <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           <div className="lg:col-span-6 reveal">

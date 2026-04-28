@@ -44,7 +44,7 @@ const items: { title: string; body: string; icon: React.ReactNode }[] = [
 
 export default function TrustBar() {
   return (
-    <section className="grain relative w-full bg-espresso text-cream py-16 lg:py-20 border-y border-cream/10">
+    <section className="grain relative w-full bg-espresso text-cream py-12 lg:py-16 border-y border-cream/10">
       <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-10 gap-y-10">
           {items.map((item) => (

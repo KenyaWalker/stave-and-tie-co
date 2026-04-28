@@ -39,7 +39,7 @@ const products: Product[] = [
 
 export default function FeaturedProducts() {
   return (
-    <section className="relative w-full bg-espresso text-cream pt-24 lg:pt-32 pb-20 lg:pb-28">
+    <section className="relative w-full bg-espresso text-cream pt-20 lg:pt-24 pb-20 lg:pb-24">
       <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 reveal">
           <div>

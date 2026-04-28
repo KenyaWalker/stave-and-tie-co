@@ -49,7 +49,7 @@ export default function Process() {
   return (
     <section
       id="process"
-      className="relative w-full bg-paper text-ink pt-24 lg:pt-32 pb-24 lg:pb-32 scroll-mt-24"
+      className="relative w-full bg-paper text-ink pt-20 lg:pt-24 pb-20 lg:pb-24 scroll-mt-24"
     >
       <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 reveal">

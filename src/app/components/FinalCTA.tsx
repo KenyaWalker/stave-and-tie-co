@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function FinalCTA() {
   return (
-    <section className="relative w-full overflow-hidden bg-espresso text-cream pt-28 lg:pt-36 pb-28 lg:pb-36">
+    <section className="relative w-full overflow-hidden bg-espresso text-cream pt-24 lg:pt-28 pb-24 lg:pb-28">
       <Image
         src="/photos/img_5793.jpg"
         alt=""
