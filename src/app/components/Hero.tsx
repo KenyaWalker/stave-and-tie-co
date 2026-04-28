@@ -18,23 +18,22 @@ export default function Hero() {
         aria-hidden
       />
 
-      {/* Legibility band behind headline only — leaves wood clear below */}
-      <div className="absolute inset-x-0 top-0 h-[min(46%,380px)] bg-gradient-to-b from-[#0c0805]/82 via-[#0c0805]/45 to-transparent pointer-events-none" />
-      {/* Light vignette on sides; barely any crush at bottom so wood stays the hero */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0502]/40 via-transparent to-[#0a0502]/35 pointer-events-none" />
-      <div className="absolute inset-0 [background:radial-gradient(100%_70%_at_50%_55%,transparent_42%,#0a0502/45_100%)] pointer-events-none" />
+      {/* Legibility: top-right only — left side stays open for the wood */}
+      <div className="pointer-events-none absolute top-0 right-0 h-[min(52dvh,480px)] w-[min(92vw,720px)] bg-gradient-to-bl from-[#0c0805]/88 via-[#0c0805]/40 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0a0502]/35 via-transparent to-[#0a0502]/25" />
+      <div className="pointer-events-none absolute inset-0 [background:radial-gradient(100%_70%_at_35%_55%,transparent_38%,#0a0502/40_100%)]" />
 
-      <div className="relative z-10 mx-auto max-w-[1480px] px-6 lg:px-12 pt-28 lg:pt-32 pb-12 min-h-dvh flex flex-col items-start">
-        <div className="max-w-[820px] reveal">
+      <div className="relative z-10 mx-auto flex min-h-dvh w-full max-w-[1480px] flex-col items-end px-6 pt-28 pb-12 lg:px-12 lg:pt-32">
+        <div className="max-w-[540px] text-right reveal lg:max-w-[600px]">
           <p className="plate-bright">Kentucky · Made by a Working Fireman</p>
           <h1 className="mt-4 display text-[clamp(2.8rem,8vw,6.5rem)] text-cream leading-[0.92]">
             Built With Purpose.
           </h1>
-          <p className="mt-5 text-cream/88 text-[16px] lg:text-[17px] leading-[1.65] max-w-[48ch] font-light">
+          <p className="mt-5 text-cream/88 text-[16px] lg:text-[17px] leading-[1.65] font-light lg:ml-auto lg:max-w-[48ch]">
             Handcrafted bourbon barrel pieces, made in Kentucky by a working fireman.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-wrap justify-end gap-3">
             <Link href="/commission" className="btn-gilt">
               Start Your Piece <span aria-hidden>→</span>
             </Link>
