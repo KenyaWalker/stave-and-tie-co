@@ -5,8 +5,8 @@ export default function Hero() {
     <section id="top" className="relative w-full min-h-[92svh] overflow-hidden bg-espresso text-parchment">
       <video
         className="absolute inset-0 h-full w-full object-cover"
-        src="/video/hero-fireplace.mp4"
-        poster="/video/hero-fireplace-poster.jpg"
+        src="/video/hero-5641-v4.mp4"
+        poster="/video/hero-5641-poster.jpg"
         autoPlay
         muted
         loop
@@ -17,11 +17,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-[#1a0d06]/92" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#1a0d06]/65 via-transparent to-[#1a0d06]/45" />
       <div className="absolute inset-0 [background:radial-gradient(120%_80%_at_50%_50%,transparent_45%,#0e0703_120%)]" />
-
-      <div className="absolute top-32 right-6 lg:right-12 z-10 hidden md:flex flex-col items-end gap-3 text-right">
-        <span className="seal seal-lg">S<span className="text-gilt-2">&amp;</span>T</span>
-        <span className="plate-bright !tracking-[0.36em] text-gilt-2/90">Est. Kentucky</span>
-      </div>
 
       <div className="relative z-10 mx-auto max-w-[1480px] px-6 lg:px-12 pt-32 lg:pt-40 pb-20 min-h-[92svh] flex items-end">
         <div className="max-w-3xl">

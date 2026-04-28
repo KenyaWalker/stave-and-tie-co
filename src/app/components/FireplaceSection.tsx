@@ -7,7 +7,7 @@ export default function FireplaceSection() {
       <section className="grain relative w-full bg-char text-parchment pt-20 lg:pt-28 pb-16 lg:pb-24">
         <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
           <div className="ornament">
-            <span className="ornament-mark">S<span className="text-gilt-2">&amp;</span>T · No. II</span>
+            <span className="ornament-mark">No. II · Our Story</span>
           </div>
 
           <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -39,8 +39,7 @@ export default function FireplaceSection() {
               <p className="mt-4 text-parchment/70 leading-[1.9] max-w-[46ch]">
                 Crafted by a local fireman. Supported by the firehouses that shaped him.
               </p>
-              <p className="script text-[2.2rem] leading-none mt-8">— from the shop</p>
-              <Link href="/our-story" className="mt-8 btn-gilt inline-flex">
+              <Link href="/our-story" className="mt-9 btn-gilt inline-flex">
                 Meet the maker <span>→</span>
               </Link>
             </div>
@@ -69,8 +68,7 @@ export default function FireplaceSection() {
 
       <section className="grain relative w-full bg-espresso text-parchment pt-24 lg:pt-32 pb-24 lg:pb-32">
         <div className="mx-auto max-w-[1480px] px-6 lg:px-12 text-center">
-          <span className="seal mx-auto">S<span className="text-gilt-2">&amp;</span>T</span>
-          <p className="mt-7 plate-bright !tracking-[0.36em]">Begin</p>
+          <p className="plate-bright !tracking-[0.36em]">Begin</p>
           <h2 className="mt-6 display text-cream text-[clamp(2.6rem,6vw,5.6rem)] leading-[0.92] max-w-[18ch] mx-auto">
             From the firehouse
             <br />
@@ -80,7 +78,6 @@ export default function FireplaceSection() {
             Tell us your piece &mdash; a name, a station, a story, or a sentiment.
             We&rsquo;ll engrave it into reclaimed white oak and finish it by hand.
           </p>
-          <p className="script text-[2.6rem] leading-none mt-7">Made one at a time.</p>
           <div className="mt-10 flex flex-wrap justify-center items-center gap-3">
             <Link href="/commission" className="btn-gilt">
               Start your commission <span>→</span>

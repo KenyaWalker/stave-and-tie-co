@@ -6,7 +6,7 @@ export default function HomeTeasers() {
     <section className="grain relative w-full bg-espresso text-parchment pt-20 lg:pt-28 pb-16 lg:pb-20">
       <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
         <div className="ornament">
-          <span className="ornament-mark">S<span className="text-gilt-2">&amp;</span>T · No. I</span>
+          <span className="ornament-mark">No. I · The Collection</span>
         </div>
 
         <div className="mt-12 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
