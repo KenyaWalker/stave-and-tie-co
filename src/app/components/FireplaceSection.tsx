@@ -17,21 +17,18 @@ export default function FireplaceSection() {
         </h2>
       </div>
 
-      <div className="mt-8 relative left-1/2 -translate-x-1/2 w-screen bg-[#4a2817] overflow-hidden">
-        <div className="relative h-[230px] md:h-[290px] lg:h-[360px]">
-          <video
-            className="absolute inset-0 h-full w-full object-cover"
-            src="/video/hero-5641-v4.mp4"
-            poster="/video/hero-5641-poster.jpg"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            aria-hidden
+      <div className="mt-8 relative left-1/2 -translate-x-1/2 w-screen bg-[#2a150c] overflow-hidden">
+        <div className="relative h-[260px] md:h-[340px] lg:h-[440px]">
+          <Image
+            src="/photos/img_5793.jpg"
+            alt="Custom engraved bourbon barrel head wall art"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[50%_45%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#2a150c]/35 via-transparent to-[#2a150c]/35" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#4a2817]/30 via-transparent to-[#4a2817]/32" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#160d07]/55 via-[#160d07]/15 to-[#160d07]/55" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#160d07]/25 via-transparent to-[#160d07]/55" />
         </div>
       </div>
 
