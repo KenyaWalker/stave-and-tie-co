@@ -4,12 +4,12 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="grid min-h-dvh w-full grid-cols-1 bg-espresso text-cream lg:grid-cols-[minmax(0,1fr)_minmax(300px,26rem)]"
+      className="grid min-h-dvh w-full grid-cols-1 bg-[#0a0705] text-cream lg:grid-cols-[minmax(0,1fr)_minmax(300px,26rem)]"
     >
-      {/* Wood / video — nothing overlays this column; wood stays the focus */}
-      <div className="relative h-[min(58dvh,520px)] overflow-hidden lg:h-auto lg:min-h-dvh">
+      {/* Wood / video — anchored to bottom so the lower frame isn’t cropped away */}
+      <div className="relative h-[min(58dvh,520px)] overflow-hidden bg-[#0c0805] lg:h-auto lg:min-h-dvh">
         <video
-          className="absolute inset-0 h-full w-full object-cover object-[48%_26%]"
+          className="absolute inset-0 h-full w-full object-cover object-bottom"
           src="/video/hero-5639.mp4"
           poster="/video/hero-5639-poster.jpg"
           autoPlay
@@ -19,11 +19,14 @@ export default function Hero() {
           preload="auto"
           aria-hidden
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/25 lg:to-black/35" />
+        {/* Theatrical depth: warm shadow pool at bottom, subtle top falloff */}
+        <div className="pointer-events-none absolute inset-0 bg-[#1f140c]/22 mix-blend-multiply" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0a0705]/50 via-transparent to-[#070504]/55" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#120c08]/45 lg:to-[#0a0705]/55" />
       </div>
 
-      {/* Copy lives in its own panel — zero overlap with the wood */}
-      <div className="grain relative flex flex-col justify-center border-cream/10 bg-[#16100c] px-6 py-14 sm:px-8 lg:min-h-dvh lg:border-l lg:border-t-0 lg:px-10 lg:pb-20 lg:pt-32 xl:px-12">
+      {/* Copy panel — deep walnut, reads as one piece with the video */}
+      <div className="grain relative flex flex-col justify-center border-[#2a2118]/80 bg-[#0e0906] px-6 py-14 sm:px-8 lg:min-h-dvh lg:border-l lg:border-t-0 lg:px-10 lg:pb-20 lg:pt-32 xl:px-12">
         <div className="reveal">
           <p className="plate-bright">Kentucky · Made by a Working Fireman</p>
           <h1 className="mt-4 display text-[clamp(2.5rem,4.2vw,3.85rem)] text-cream leading-[0.94] xl:text-[clamp(2.6rem,3.6vw,4rem)]">
