@@ -3,61 +3,93 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
-const links = [
+const links: { href: string; label: string }[] = [
+  { href: "/collection", label: "Shop" },
   { href: "/our-story", label: "Our Story" },
-  { href: "/collection", label: "Collection" },
-  { href: "/commission", label: "Commission" },
+  { href: "/#process", label: "Process" },
+  { href: "/commission", label: "Contact" },
 ];
 
 export default function Nav() {
   const pathname = usePathname() || "/";
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="absolute top-0 inset-x-0 z-50">
-      <div className="mx-auto max-w-[1480px] px-6 lg:px-12 pt-4 lg:pt-6">
-        <div className="flex items-center justify-between rounded-[2px] border border-black/10 bg-cream/90 px-4 py-3 lg:px-5 backdrop-blur-md">
+    <header
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-paper/85 backdrop-blur-md border-b border-ink/8"
+          : "bg-paper/0 backdrop-blur-0 border-b border-transparent"
+      }`}
+    >
+      <div className="mx-auto max-w-[1480px] px-5 lg:px-10">
+        <div className="flex items-center justify-between h-[68px] lg:h-[76px]">
           <Link href="/" className="flex items-center gap-3 min-w-0">
-            <span className="relative h-9 w-9 rounded-full overflow-hidden border border-[#8e6a3d]/35 bg-white/90 shrink-0">
+            <span className="relative h-8 w-8 lg:h-9 lg:w-9 rounded-full overflow-hidden border border-ink/15 bg-white/95 shrink-0">
               <Image
                 src="/brand/logo-5670.jpg"
-                alt="The Stave & Tie Co. logo"
+                alt="The Stave & Tie Co."
                 fill
                 sizes="36px"
                 className="object-cover"
               />
             </span>
-            <span className="display text-[#1a120b] text-[18px] leading-none truncate">
-              The Stave <span className="display-italic text-[#a77d46]">&amp;</span> Tie Co.
+            <span
+              className={`display text-[17px] lg:text-[18px] leading-none truncate transition-colors ${
+                scrolled ? "text-ink" : "text-cream"
+              }`}
+            >
+              The Stave <span className="display-italic text-gilt-2">&amp;</span> Tie Co.
             </span>
           </Link>
 
-          <div className="flex items-center gap-4 lg:gap-8">
-            <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-              {links.slice(0, 2).map((l) => {
-                const active = pathname.startsWith(l.href);
-                return (
-                  <Link
-                    key={l.href}
-                    href={l.href}
-                    className={`plate !tracking-[0.26em] transition-colors ${
-                      active ? "!text-[#7a5630]" : "!text-[#302015] hover:!text-[#7a5630]"
-                    }`}
-                  >
-                    {l.label}
-                  </Link>
-                );
-              })}
-            </nav>
+          <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+            {links.map((l) => {
+              const active = l.href.startsWith("/#")
+                ? false
+                : l.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(l.href);
+              return (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className={`text-[12px] tracking-[0.18em] uppercase font-medium transition-colors ${
+                    scrolled
+                      ? active
+                        ? "text-ink"
+                        : "text-ink/70 hover:text-ink"
+                      : active
+                      ? "text-cream"
+                      : "text-cream/80 hover:text-cream"
+                  }`}
+                >
+                  {l.label}
+                </Link>
+              );
+            })}
+          </nav>
 
-            <Link
-              href="/commission"
-              className="inline-flex items-center gap-2 border border-[#6f4c2a] px-3.5 py-2.5 text-[10px] tracking-[0.22em] uppercase text-[#3a2616] hover:bg-[#6f4c2a] hover:text-[#f3ead4] transition-colors"
-            >
-              Start Your Piece
-              <span>→</span>
-            </Link>
-          </div>
+          <Link
+            href="/commission"
+            className={`hidden sm:inline-flex items-center gap-2 px-4 py-2.5 text-[11px] tracking-[0.2em] uppercase font-medium transition-colors ${
+              scrolled
+                ? "border border-ink text-ink hover:bg-ink hover:text-cream"
+                : "border border-cream/85 text-cream hover:bg-cream hover:text-ink"
+            }`}
+          >
+            Start Your Piece
+            <span aria-hidden>→</span>
+          </Link>
         </div>
       </div>
     </header>

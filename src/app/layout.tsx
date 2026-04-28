@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter, Special_Elite, Allura } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -17,35 +17,20 @@ const fraunces = Fraunces({
   axes: ["opsz", "SOFT"],
 });
 
-const specialElite = Special_Elite({
-  variable: "--font-special-elite",
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
-
-const allura = Allura({
-  variable: "--font-allura",
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title:
-    "The Stave & Tie Co. — Luxury Reclaimed Bourbon Barrel Wall Art | Kentucky",
+  title: "The Stave & Tie Co. — Built With Purpose | Kentucky Bourbon Barrel Pieces",
   description:
-    "A Kentucky workshop creating hand-engraved wall pieces from retired bourbon barrels. Each commission is carved by a working firefighter — finished slow, made for one wall.",
+    "Handcrafted bourbon barrel pieces, made in Kentucky by a working firefighter. Custom barrel heads, stave coat racks, and flight boards — built one at a time.",
   openGraph: {
-    title: "The Stave & Tie Co. — Luxury Reclaimed Bourbon Barrel Wall Art",
+    title: "The Stave & Tie Co. — Built With Purpose",
     description:
-      "A Kentucky workshop. Made-to-commission. Reclaimed white oak from the bourbon trail.",
+      "Handcrafted bourbon barrel pieces from Kentucky. Made by a working fireman.",
     type: "website",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#150c06",
+  themeColor: "#1f130a",
 };
 
 export default function RootLayout({
@@ -56,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${fraunces.variable} ${specialElite.variable} ${allura.variable} h-full antialiased`}
+      className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-espresso text-parchment">
         <Nav />
