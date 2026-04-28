@@ -1,26 +1,245 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Rich dark luxury palette — espresso, oak, bourbon, gilt */
+  --espresso: #150c06;
+  --char: #20140c;
+  --oak: #2e1d10;
+  --oak-2: #3a2515;
+  --bronze: #7d4f24;
+  --bourbon: #9d6228;
+  --copper: #c1813b;
+  --gilt: #c9a64f;
+  --gilt-2: #d8b765;
+  --oxblood: #5a1810;
+  --oxblood-2: #7a2a18;
+  --parchment: #ecdab2;
+  --parchment-2: #d8c597;
+  --cream: #f3ead4;
+  --rule: rgba(236, 218, 178, 0.16);
+  --rule-strong: rgba(236, 218, 178, 0.42);
+
+  --background: var(--espresso);
+  --foreground: var(--parchment);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-espresso: var(--espresso);
+  --color-char: var(--char);
+  --color-oak: var(--oak);
+  --color-oak-2: var(--oak-2);
+  --color-bronze: var(--bronze);
+  --color-bourbon: var(--bourbon);
+  --color-copper: var(--copper);
+  --color-gilt: var(--gilt);
+  --color-gilt-2: var(--gilt-2);
+  --color-oxblood: var(--oxblood);
+  --color-oxblood-2: var(--oxblood-2);
+  --color-parchment: var(--parchment);
+  --color-parchment-2: var(--parchment-2);
+  --color-cream: var(--cream);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-fraunces);
+  --font-stamp: var(--font-special-elite);
+  --font-script: var(--font-allura);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html,
+body {
+  background: var(--espresso);
+  color: var(--parchment);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--gilt);
+  color: var(--espresso);
+}
+
+/* Editorial display type — Fraunces */
+.display {
+  font-family: var(--font-fraunces), ui-serif, "Hoefler Text", Georgia, serif;
+  font-feature-settings: "ss01", "ss02", "lnum";
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  letter-spacing: -0.025em;
+  line-height: 0.86;
+  font-weight: 400;
+}
+.display-italic {
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  font-weight: 300;
+}
+
+/* Museum plate label */
+.plate {
+  font-family: var(--font-special-elite), ui-monospace, monospace;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  color: var(--parchment);
+  opacity: 0.75;
+}
+.plate-bright {
+  font-family: var(--font-special-elite), ui-monospace, monospace;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  color: var(--gilt-2);
+  opacity: 1;
+}
+.plate-dark {
+  font-family: var(--font-special-elite), ui-monospace, monospace;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  color: var(--espresso);
+  opacity: 0.78;
+}
+
+.script {
+  font-family: var(--font-script), cursive;
+  font-style: italic;
+  color: var(--gilt-2);
+}
+
+/* Hairline rule */
+.rule {
+  height: 1px;
+  background: var(--parchment);
+  opacity: 0.16;
+}
+
+/* Subtle wood-grain darkening (used on accent panels) */
+.wood {
+  background-color: var(--oak);
+  background-image:
+    radial-gradient(120% 100% at 50% 0%, rgba(193, 129, 59, 0.12), transparent 60%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.18) 0,
+      rgba(0, 0, 0, 0.18) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 90s linear infinite;
+  will-change: transform;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+
+/* Reveal-on-scroll — visible by default */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-fade linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 22%;
+    }
+    @keyframes reveal-fade {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Slow drift for hero imagery — very slow ken burns */
+@keyframes drift {
+  0%   { transform: scale(1.05) translate3d(0, 0, 0); }
+  50%  { transform: scale(1.10) translate3d(-1.0%, -0.6%, 0); }
+  100% { transform: scale(1.05) translate3d(0, 0, 0); }
+}
+.drift {
+  animation: drift 60s ease-in-out infinite;
+}
+
+/* Refined link underline */
+.link-rule {
+  position: relative;
+  display: inline-block;
+}
+.link-rule::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 1px;
+  background: currentColor;
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.link-rule:hover::after {
+  transform-origin: right;
+  transform: scaleX(0);
+}
+
+/* Italic numerals */
+.numeral {
+  font-family: var(--font-fraunces), ui-serif, serif;
+  font-feature-settings: "lnum", "tnum";
+  font-style: italic;
+  font-weight: 300;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  color: var(--gilt-2);
+}
+
+/* Gilt foil button */
+.btn-gilt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1.6rem;
+  border: 1px solid var(--gilt);
+  color: var(--gilt-2);
+  font-family: var(--font-special-elite), monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  background: transparent;
+  transition: background-color 400ms ease, color 400ms ease, border-color 400ms ease;
+}
+.btn-gilt:hover {
+  background: var(--gilt);
+  color: var(--espresso);
+  border-color: var(--gilt);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1.6rem;
+  border: 1px solid var(--parchment);
+  color: var(--parchment);
+  font-family: var(--font-special-elite), monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  background: transparent;
+  transition: background-color 400ms ease, color 400ms ease;
+}
+.btn-ghost:hover {
+  background: var(--parchment);
+  color: var(--espresso);
 }
