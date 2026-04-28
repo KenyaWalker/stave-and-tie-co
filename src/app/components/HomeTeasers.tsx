@@ -3,81 +3,56 @@ import Link from "next/link";
 
 export default function HomeTeasers() {
   return (
-    <section className="relative w-full bg-espresso text-parchment pt-14 lg:pt-18 pb-10 lg:pb-12">
+    <section className="relative w-full bg-espresso text-parchment pt-14 lg:pt-20 pb-14 lg:pb-20">
       <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-          <h2 className="display text-[clamp(2rem,4.6vw,3.8rem)] text-cream">
+          <h2 className="display text-[clamp(2rem,4.6vw,3.8rem)] text-cream max-w-[14ch]">
             Western luxury,
             <br />
             <span className="display-italic text-gilt-2">done clean.</span>
           </h2>
           <p className="text-parchment/80 max-w-[44ch] leading-[1.8]">
-            Explore product styles by collection and start a custom order in minutes.
+            Three signature pieces. All hand-engraved, finished, and shipped from Kentucky.
           </p>
         </div>
 
         <div className="rule mt-10" />
 
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-9">
-          <Card
-            href="/collection"
-            title="The Collection"
-            subtitle="Premium custom pieces, each engraved to order."
-            src="/photos/img_5662.jpg"
-            alt="White and dark hats on dark wood wall mount"
-            cta="Browse collection"
-          />
-          <Card
-            href="/our-story"
-            title="Meet the Maker"
-            subtitle="Crafted by a local fireman in Kentucky — premium finish, every time."
-            src="/photos/img_5927.jpg"
-            alt="Station One custom bourbon barrel head"
-            cta="Read our story"
-            imageClassName="object-[50%_48%]"
-          />
-        </div>
+        <Link
+          href="/collection"
+          className="group mt-12 lg:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-12 items-center"
+        >
+          <div className="relative aspect-[4/3] lg:aspect-[5/4] lg:col-span-7 overflow-hidden border border-parchment/20">
+            <Image
+              src="/photos/img_5662.jpg"
+              alt="Bourbon barrel head wall art collection"
+              fill
+              sizes="(min-width: 1024px) 60vw, 92vw"
+              className="object-cover brightness-[0.78] contrast-[1.06] saturate-[0.95] transition-transform duration-[1200ms] group-hover:scale-[1.04]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-espresso/65 via-black/15 to-transparent" />
+            <div className="absolute left-5 bottom-5 plate-bright !tracking-[0.28em] text-cream/95">
+              The Collection
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 mt-8 lg:mt-0">
+            <p className="plate-bright !tracking-[0.28em]">Featured</p>
+            <h3 className="mt-4 display text-cream text-[clamp(2.4rem,5vw,4.4rem)] leading-[0.95]">
+              Three pieces.
+              <br />
+              <span className="display-italic text-gilt-2">Each one built by hand.</span>
+            </h3>
+            <p className="mt-6 text-parchment/85 leading-[1.9] max-w-[46ch]">
+              Custom engraved barrel heads. Reclaimed stave coat racks. Bourbon flight boards.
+              Premium finish, every time.
+            </p>
+            <span className="mt-8 btn-gilt !tracking-[0.24em] inline-flex">
+              Browse the collection <span>→</span>
+            </span>
+          </div>
+        </Link>
       </div>
     </section>
-  );
-}
-
-function Card({
-  href,
-  title,
-  subtitle,
-  src,
-  alt,
-  cta,
-  imageClassName = "",
-}: {
-  href: string;
-  title: string;
-  subtitle: string;
-  src: string;
-  alt: string;
-  cta: string;
-  imageClassName?: string;
-}) {
-  return (
-    <Link href={href} className="group block">
-      <div className="relative aspect-[4/3] overflow-hidden border border-parchment/20">
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          sizes="(min-width: 1024px) 50vw, 92vw"
-          className={`object-cover brightness-[0.74] contrast-[1.08] saturate-[0.9] transition-transform duration-1000 group-hover:scale-105 ${imageClassName}`}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-espresso/88 via-black/30 to-black/15" />
-        <div className="absolute left-5 bottom-5 right-5">
-          <h3 className="display text-cream text-[clamp(2rem,4vw,3.2rem)]">{title}</h3>
-          <p className="mt-2 text-parchment/90 text-[15px]">{subtitle}</p>
-          <span className="mt-4 inline-flex items-center gap-2 plate-bright !tracking-[0.22em]">
-            {cta} <span>→</span>
-          </span>
-        </div>
-      </div>
-    </Link>
   );
 }
