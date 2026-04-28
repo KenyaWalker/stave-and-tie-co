@@ -1,6 +1,5 @@
 import Hero from "./components/Hero";
 import HomeTeasers from "./components/HomeTeasers";
-import RecentWork from "./components/RecentWork";
 import FireplaceSection from "./components/FireplaceSection";
 
 export default function Home() {
@@ -8,7 +7,6 @@ export default function Home() {
     <>
       <Hero />
       <HomeTeasers />
-      <RecentWork />
       <FireplaceSection />
     </>
   );
