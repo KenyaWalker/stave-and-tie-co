@@ -21,40 +21,50 @@ export default function HomeTeasers() {
           </p>
         </div>
 
-        <Link
-          href="/collection"
-          className="group mt-14 lg:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-12 items-center"
-        >
-          <div className="relative aspect-[4/3] lg:aspect-[5/4] lg:col-span-7 overflow-hidden border border-parchment/20">
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-7">
+          <div className="relative aspect-[3/4] overflow-hidden border border-parchment/15">
             <Image
               src="/photos/img_5662.jpg"
-              alt="Bourbon barrel head wall art collection"
+              alt="Reclaimed bourbon stave coat rack with a single white western hat"
               fill
-              sizes="(min-width: 1024px) 60vw, 92vw"
-              className="object-cover brightness-[0.78] contrast-[1.08] saturate-[1.02] transition-transform duration-[1200ms] group-hover:scale-[1.04]"
+              sizes="(min-width: 640px) 46vw, 92vw"
+              className="object-cover brightness-[0.92] contrast-[1.05]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-espresso/75 via-black/15 to-transparent" />
-            <div className="absolute left-5 bottom-5 plate-bright !tracking-[0.32em] text-gilt-3">
-              <span className="numeral mr-3">i</span>The Collection
+            <div className="absolute inset-0 bg-gradient-to-t from-espresso/55 via-transparent to-transparent" />
+            <div className="absolute left-4 bottom-4 plate-bright !tracking-[0.32em] text-gilt-3">
+              <span className="numeral mr-3">i</span>The Stave Coat Rack
             </div>
           </div>
-
-          <div className="lg:col-span-5 mt-9 lg:mt-0">
-            <p className="plate-bright !tracking-[0.32em]">Featured</p>
-            <h3 className="mt-5 display text-cream text-[clamp(2.6rem,5.4vw,4.8rem)] leading-[0.92]">
-              Three pieces.
-              <br />
-              <span className="display-italic text-gilt-2">Each one built by hand.</span>
-            </h3>
-            <p className="mt-6 text-parchment/85 leading-[1.95] max-w-[46ch]">
-              Custom-engraved barrel heads. Reclaimed stave coat racks. Bourbon flight boards.
-              Premium finish, every time.
-            </p>
-            <span className="mt-8 btn-gilt inline-flex">
-              Browse the collection <span>→</span>
-            </span>
+          <div className="relative aspect-[3/4] overflow-hidden border border-parchment/15">
+            <Image
+              src="/photos/img_5664.jpg"
+              alt="Reclaimed bourbon stave coat rack styled with two hats and a denim jacket"
+              fill
+              sizes="(min-width: 640px) 46vw, 92vw"
+              className="object-cover brightness-[0.92] contrast-[1.05]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-espresso/55 via-transparent to-transparent" />
+            <div className="absolute left-4 bottom-4 plate-bright !tracking-[0.32em] text-gilt-3">
+              <span className="numeral mr-3">ii</span>Styled · Two-up
+            </div>
           </div>
-        </Link>
+        </div>
+
+        <div className="mt-12 lg:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+          <div className="lg:col-span-7">
+            <p className="plate-bright !tracking-[0.32em]">The Range</p>
+            <h3 className="mt-5 display text-cream text-[clamp(2.2rem,4.6vw,3.8rem)] leading-[0.95]">
+              Custom barrel heads.
+              <br />
+              <span className="display-italic text-gilt-2">Stave coat racks. Flight boards.</span>
+            </h3>
+          </div>
+          <div className="lg:col-span-5 flex justify-start lg:justify-end">
+            <Link href="/collection" className="btn-gilt">
+              Browse the collection <span>→</span>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

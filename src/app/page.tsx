@@ -1,12 +1,14 @@
 import Hero from "./components/Hero";
-import FireplaceSection from "./components/FireplaceSection";
 import HomeTeasers from "./components/HomeTeasers";
+import RecentWork from "./components/RecentWork";
+import FireplaceSection from "./components/FireplaceSection";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <HomeTeasers />
+      <RecentWork />
       <FireplaceSection />
     </>
   );

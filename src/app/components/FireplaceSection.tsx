@@ -7,7 +7,7 @@ export default function FireplaceSection() {
       <section className="grain relative w-full bg-char text-parchment pt-20 lg:pt-28 pb-16 lg:pb-24">
         <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
           <div className="ornament">
-            <span className="ornament-mark">No. II · Our Story</span>
+            <span className="ornament-mark">No. III · Our Story</span>
           </div>
 
           <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">

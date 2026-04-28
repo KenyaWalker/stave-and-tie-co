@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative w-full min-h-[92svh] overflow-hidden bg-espresso text-parchment">
+    <section id="top" className="relative w-full min-h-[82svh] overflow-hidden bg-espresso text-parchment">
       <video
-        className="absolute inset-0 h-full w-full object-cover"
-        src="/video/hero-5641-v4.mp4"
-        poster="/video/hero-5641-poster.jpg"
+        className="absolute inset-0 h-full w-full object-cover object-[50%_30%]"
+        src="/video/hero-5641-v5.mp4"
+        poster="/video/hero-5641-v5-poster.jpg"
         autoPlay
         muted
         loop
@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#1a0d06]/65 via-transparent to-[#1a0d06]/45" />
       <div className="absolute inset-0 [background:radial-gradient(120%_80%_at_50%_50%,transparent_45%,#0e0703_120%)]" />
 
-      <div className="relative z-10 mx-auto max-w-[1480px] px-6 lg:px-12 pt-32 lg:pt-40 pb-20 min-h-[92svh] flex items-end">
+      <div className="relative z-10 mx-auto max-w-[1480px] px-6 lg:px-12 pt-28 lg:pt-32 pb-16 min-h-[82svh] flex items-end">
         <div className="max-w-3xl">
           <p className="plate-bright !tracking-[0.36em]">The Stave &amp; Tie Co. — Bourbon Barrel Art</p>
           <h1 className="mt-5 display text-[clamp(3rem,9.4vw,7.6rem)] text-cream leading-[0.9]">
