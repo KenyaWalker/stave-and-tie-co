@@ -1,23 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  /* Rich dark luxury palette — espresso, oak, bourbon, gilt */
-  --espresso: #150c06;
-  --char: #20140c;
-  --oak: #2e1d10;
-  --oak-2: #3a2515;
-  --bronze: #7d4f24;
-  --bourbon: #9d6228;
-  --copper: #c1813b;
-  --gilt: #c9a64f;
-  --gilt-2: #d8b765;
+  /* Deep walnut / oak / burnished brass — Hermès-for-woodwork palette */
+  --espresso: #261610;
+  --char: #321e14;
+  --oak: #46291a;
+  --oak-2: #5a3724;
+  --bronze: #8e5e2c;
+  --bourbon: #b07232;
+  --copper: #cb8741;
+  --gilt: #c19341;
+  --gilt-2: #d8b15a;
+  --gilt-3: #ecd089;
   --oxblood: #5a1810;
   --oxblood-2: #7a2a18;
-  --parchment: #ecdab2;
-  --parchment-2: #d8c597;
-  --cream: #f3ead4;
-  --rule: rgba(236, 218, 178, 0.16);
-  --rule-strong: rgba(236, 218, 178, 0.42);
+  --parchment: #ead4a8;
+  --parchment-2: #d6c08f;
+  --cream: #f0e2c1;
+  --rule: rgba(234, 212, 168, 0.18);
+  --rule-strong: rgba(234, 212, 168, 0.42);
 
   --background: var(--espresso);
   --foreground: var(--parchment);
@@ -35,6 +36,7 @@
   --color-copper: var(--copper);
   --color-gilt: var(--gilt);
   --color-gilt-2: var(--gilt-2);
+  --color-gilt-3: var(--gilt-3);
   --color-oxblood: var(--oxblood);
   --color-oxblood-2: var(--oxblood-2);
   --color-parchment: var(--parchment);
@@ -54,6 +56,15 @@ body {
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Ambient firelight glow + subtle grain on the page */
+body {
+  background-color: var(--espresso);
+  background-image:
+    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(214, 144, 70, 0.08), transparent 65%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(0, 0, 0, 0.35), transparent 70%);
+  background-attachment: fixed;
 }
 
 ::selection {
@@ -116,18 +127,124 @@ body {
   opacity: 0.16;
 }
 
-/* Subtle wood-grain darkening (used on accent panels) */
+/* Subtle wood-grain — vertical fibers + warm wash. Layer over dark sections. */
+.grain {
+  position: relative;
+}
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 230, 190, 0.014) 0px,
+      rgba(255, 230, 190, 0.014) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.05) 0px,
+      rgba(0, 0, 0, 0.05) 2px,
+      transparent 2px,
+      transparent 7px
+    );
+  mix-blend-mode: overlay;
+  opacity: 0.55;
+}
+
+/* Heavier wood plank — for accent panels */
 .wood {
   background-color: var(--oak);
   background-image:
-    radial-gradient(120% 100% at 50% 0%, rgba(193, 129, 59, 0.12), transparent 60%),
+    radial-gradient(120% 100% at 50% 0%, rgba(214, 144, 70, 0.18), transparent 60%),
     repeating-linear-gradient(
       90deg,
-      rgba(0, 0, 0, 0.18) 0,
-      rgba(0, 0, 0, 0.18) 1px,
+      rgba(0, 0, 0, 0.22) 0,
+      rgba(0, 0, 0, 0.22) 1px,
       transparent 1px,
       transparent 5px
     );
+}
+
+/* Editorial divider with center monogram / ornament */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  color: var(--gilt-2);
+  font-family: var(--font-fraunces), serif;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  font-size: 1.05rem;
+  opacity: 0.92;
+}
+.ornament::before,
+.ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(216, 177, 90, 0.35) 18%,
+    rgba(216, 177, 90, 0.35) 82%,
+    transparent
+  );
+}
+.ornament-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-special-elite), monospace;
+  font-style: normal;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-size: 0.62rem;
+  color: var(--gilt-2);
+}
+
+/* Wax-seal style monogram chip */
+.seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  border: 1px solid rgba(216, 177, 90, 0.55);
+  background:
+    radial-gradient(80% 80% at 35% 30%, rgba(236, 208, 137, 0.18), transparent 60%),
+    radial-gradient(120% 120% at 50% 80%, rgba(0, 0, 0, 0.4), transparent 60%),
+    var(--oxblood);
+  color: var(--gilt-3);
+  font-family: var(--font-fraunces), serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  box-shadow:
+    inset 0 0 16px rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.04);
+}
+.seal-lg {
+  width: 92px;
+  height: 92px;
+  font-size: 1.55rem;
+}
+
+/* Italic numerals */
+.numeral {
+  font-family: var(--font-fraunces), ui-serif, serif;
+  font-feature-settings: "lnum", "tnum";
+  font-style: italic;
+  font-weight: 300;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  color: var(--gilt-2);
 }
 
 /* Marquee */
@@ -162,7 +279,7 @@ body {
   }
 }
 
-/* Slow drift for hero imagery — very slow ken burns */
+/* Slow drift — very slow ken burns */
 @keyframes drift {
   0%   { transform: scale(1.05) translate3d(0, 0, 0); }
   50%  { transform: scale(1.10) translate3d(-1.0%, -0.6%, 0); }
@@ -194,52 +311,45 @@ body {
   transform: scaleX(0);
 }
 
-/* Italic numerals */
-.numeral {
-  font-family: var(--font-fraunces), ui-serif, serif;
-  font-feature-settings: "lnum", "tnum";
-  font-style: italic;
-  font-weight: 300;
-  font-variation-settings: "opsz" 144, "SOFT" 100;
-  color: var(--gilt-2);
-}
-
-/* Gilt foil button */
+/* Burnished brass button */
 .btn-gilt {
   display: inline-flex;
   align-items: center;
   gap: 0.85rem;
-  padding: 0.95rem 1.6rem;
-  border: 1px solid var(--gilt-2);
-  color: #f2ddb0;
+  padding: 1rem 1.7rem;
+  border: 1px solid rgba(216, 177, 90, 0.85);
+  color: var(--gilt-3);
   font-family: var(--font-special-elite), monospace;
   font-size: 0.66rem;
   letter-spacing: 0.34em;
   text-transform: uppercase;
-  background: rgba(16, 10, 6, 0.38);
-  transition: background-color 400ms ease, color 400ms ease, border-color 400ms ease;
+  background:
+    linear-gradient(180deg, rgba(216, 177, 90, 0.05), rgba(0, 0, 0, 0.18)),
+    rgba(28, 16, 9, 0.45);
+  box-shadow: inset 0 1px 0 rgba(255, 220, 160, 0.06);
+  transition: background-color 350ms ease, color 350ms ease, border-color 350ms ease;
 }
 .btn-gilt:hover {
-  background: #ddb86a;
+  background: linear-gradient(180deg, #e6c479, #b88a3a);
   color: var(--espresso);
-  border-color: #ddb86a;
+  border-color: #b88a3a;
 }
 
 .btn-ghost {
   display: inline-flex;
   align-items: center;
   gap: 0.85rem;
-  padding: 0.95rem 1.6rem;
-  border: 1px solid rgba(236, 218, 178, 0.9);
-  color: #f3e4c1;
+  padding: 1rem 1.7rem;
+  border: 1px solid rgba(234, 212, 168, 0.85);
+  color: var(--cream);
   font-family: var(--font-special-elite), monospace;
   font-size: 0.66rem;
   letter-spacing: 0.34em;
   text-transform: uppercase;
-  background: rgba(16, 10, 6, 0.3);
-  transition: background-color 400ms ease, color 400ms ease;
+  background: rgba(28, 16, 9, 0.35);
+  transition: background-color 350ms ease, color 350ms ease;
 }
 .btn-ghost:hover {
-  background: var(--parchment);
+  background: var(--cream);
   color: var(--espresso);
 }
