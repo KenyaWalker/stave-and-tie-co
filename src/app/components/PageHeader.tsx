@@ -47,17 +47,21 @@ export default function PageHeader({
       <div
         className={
           editorial
-            ? "relative mx-auto max-w-[1480px] px-6 pb-12 pt-24 lg:px-12 lg:pb-14 lg:pt-28"
+            ? "relative mx-auto max-w-[1480px] px-6 pb-12 pt-24 text-left lg:px-12 lg:pb-14 lg:pt-28"
             : "relative mx-auto max-w-[1480px] px-6 pb-16 pt-28 lg:px-12 lg:pb-20 lg:pt-36"
         }
       >
-        <p className={`tracking-[0.22em] ${editorial ? "plate-dark" : "plate-bright"}`}>{eyebrow}</p>
+        <p
+          className={`tracking-[0.22em] ${editorial ? "plate-dark" : "plate-bright"}`}
+        >
+          {eyebrow}
+        </p>
         <h1
           id={titleId}
-          className={`max-w-[min(100%,44rem)] text-balance display leading-[0.95] ${
+          className={`display leading-[0.95] ${
             editorial
-              ? "mt-4 text-[clamp(1.85rem,3.6vw,3.15rem)] text-ink lg:mt-4"
-              : "mt-5 text-[clamp(2.35rem,7.5vw,5.25rem)] text-cream lg:mt-6"
+              ? "mt-4 w-full max-w-none text-left text-balance text-[clamp(1.85rem,3.6vw,3.15rem)] text-ink lg:mt-4"
+              : "mt-5 max-w-[min(100%,44rem)] text-balance text-[clamp(2.35rem,7.5vw,5.25rem)] text-cream lg:mt-6"
           }`}
         >
           {title}
@@ -73,7 +77,7 @@ export default function PageHeader({
           <p
             className={`max-w-[52ch] text-pretty font-light ${
               editorial
-                ? "mt-4 text-[14.5px] leading-[1.7] text-ink/72 lg:mt-5"
+                ? "mt-4 text-left text-[14.5px] leading-[1.7] text-ink/72 lg:mt-5"
                 : "mt-7 text-[15.5px] leading-[1.9] lg:mt-8 text-parchment/83"
             }`}
           >
@@ -84,7 +88,7 @@ export default function PageHeader({
           <p
             className={`max-w-[52ch] text-pretty font-light ${
               editorial
-                ? "mt-3 text-[14px] leading-[1.68] text-ink/62"
+                ? "mt-3 text-left text-[14px] leading-[1.68] text-ink/62"
                 : "mt-5 text-[14.5px] leading-[1.85] text-parchment/70"
             }`}
           >

@@ -247,6 +247,10 @@ export default function Lookbook() {
                           sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 29vw, (min-width: 640px) 44vw, 78vw"
                           className={`object-cover transition-transform duration-700 hover:scale-[1.03] ${piece.focus ?? ""}`}
                         />
+                        <div
+                          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/58 via-transparent to-transparent"
+                          aria-hidden
+                        />
                       </div>
 
                       <div className="mt-3 space-y-1">
