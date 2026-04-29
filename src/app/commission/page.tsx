@@ -15,8 +15,7 @@ export default function CommissionPage() {
         variant="editorial"
         eyebrow="Custom Order"
         title="Start with an idea. We'll help shape the rest."
-        body="A custom piece starts with a simple conversation. Tell us what you're imagining — a family name, station logo, wedding date, business mark, badge, phrase, or rough idea — and we'll help turn it into something worth hanging."
-        supporting="You'll see a design proof before the work begins, so there are no surprises once your piece is in the wood."
+        body="A custom piece starts with a simple conversation. Tell us what you're imagining — a family name, station logo, wedding date, business mark, badge, phrase, or rough idea — and we'll help turn it into something worth hanging. You'll see a design proof before the work begins, so there are no surprises once your piece is in the wood."
       />
       <Commission />
     </>

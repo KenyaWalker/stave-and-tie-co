@@ -16,7 +16,7 @@ export default function ShopPage() {
         variant="editorial"
         eyebrow="Shop the Work"
         title="Real pieces. Real wood. Made one at a time."
-        body="Browse custom work from the bench — barrel heads, stave racks, and flight boards made for homes, firehouses, weddings, bars, businesses, and gifts. Every photo is real work, not stock. Use these pieces as a starting point, then make yours personal."
+        body="Browse barrel heads, stave racks, and flight boards from the bench — real pieces for homes, gifts, and gatherings. Every photo is shop work, not stock; use them as starting points for your own custom order."
       />
       <Lookbook />
 

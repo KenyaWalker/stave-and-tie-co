@@ -15,8 +15,7 @@ export default function OurStoryPage() {
         variant="editorial"
         eyebrow="Our Story"
         title="Reclaimed oak, refined by hand."
-        body="Custom heads, racks, and flight boards crafted from barrel wood — carefully designed, carved, sealed, and finished with care, patience, and pride."
-        supporting="The Stave & Tie Co. is built from two things: a love for working with his hands, and a life spent serving his community."
+        body="Custom heads, racks, and flight boards crafted from barrel wood — carefully designed, carved, sealed, and finished with care, patience, and pride. The Stave & Tie Co. is built from two things: a love for working with his hands, and a life spent serving his community."
       />
       <OurStoryPageBody />
     </>
