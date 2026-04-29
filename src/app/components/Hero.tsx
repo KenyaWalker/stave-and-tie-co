@@ -1,14 +1,15 @@
 import Link from "next/link";
 
+/** Stacked hero: flex column (video block, then copy) — never side-by-side. */
 export default function Hero() {
   return (
     <section
       id="top"
-      className="grid w-full grid-cols-1 gap-0 overflow-hidden bg-[#0d0907] text-cream lg:min-h-[min(52dvh,28rem)] lg:grid-cols-[minmax(0,1fr)_minmax(300px,26rem)]"
+      className="flex w-full flex-col gap-0 overflow-hidden bg-espresso text-cream"
     >
-      <div className="relative min-h-[min(38dvh,19rem)] w-full min-w-0 max-w-none overflow-hidden bg-[#050403] sm:min-h-[min(42dvh,22rem)] lg:min-h-[min(52dvh,28rem)] lg:shadow-[12px_0_48px_-24px_rgba(0,0,0,0.65)]">
+      <div className="relative min-h-[min(38dvh,19rem)] w-full min-w-0 overflow-hidden bg-[#050403] sm:min-h-[min(42dvh,24rem)] md:min-h-[min(45dvh,26rem)]">
         <video
-          className="absolute inset-0 box-border h-full w-full min-h-full min-w-full max-w-none border-0 object-cover object-center outline-none ring-0"
+          className="absolute inset-0 h-full w-full border-0 object-cover object-center outline-none ring-0"
           src="/video/hero-5639.mp4"
           poster="/video/hero-5639-poster.jpg"
           autoPlay
@@ -20,22 +21,14 @@ export default function Hero() {
         />
         <div className="pointer-events-none absolute inset-0 bg-[#4a241c]/26 mix-blend-multiply" />
         <div className="pointer-events-none absolute inset-0 bg-[#3d1f18]/18 mix-blend-soft-light" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#341815]/42 via-transparent to-[#140a08]/48 lg:to-transparent" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0d0907]/55 via-transparent to-transparent lg:hidden" />
-        <div
-          className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-transparent via-[#1a0e0a]/15 to-[#0d0907]/75 lg:block"
-          aria-hidden
-        />
-        <div
-          className="pointer-events-none absolute inset-y-0 right-0 z-[2] hidden w-px bg-gradient-to-b from-transparent via-cream/25 to-transparent lg:block"
-          aria-hidden
-        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#341815]/42 via-transparent to-[#140a08]/48" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0d0907]/50 via-transparent to-transparent" />
       </div>
 
-      <div className="grain relative flex min-w-0 flex-col justify-start border-t border-[#2a1814]/80 bg-[linear-gradient(180deg,rgba(216,177,90,0.05)_0%,transparent_42%),#120d0b] px-6 py-8 sm:px-8 sm:py-10 lg:min-h-[min(52dvh,28rem)] lg:justify-center lg:border-l lg:border-t-0 lg:border-[#2a1814]/60 lg:px-10 lg:py-12 lg:shadow-[-16px_0_40px_-28px_rgba(0,0,0,0.45)] xl:px-12">
-        <div className="reveal w-full max-w-[1480px] lg:mx-0">
+      <div className="grain relative border-t border-cream/10 bg-[linear-gradient(180deg,rgba(216,177,90,0.04)_0%,transparent_38%),#1f130a] px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-11">
+        <div className="reveal mx-auto w-full max-w-[1480px]">
           <p className="plate-bright text-left">The Stave &amp; Tie Co.</p>
-          <h1 className="mt-3 display text-left text-[clamp(2.35rem,4.3vw,3.65rem)] text-cream leading-[0.94] text-balance xl:text-[clamp(2.45rem,3.8vw,3.85rem)]">
+          <h1 className="mt-3 display text-left text-[clamp(2.35rem,4.3vw,3.65rem)] leading-[0.94] text-balance text-cream xl:text-[clamp(2.45rem,3.8vw,3.85rem)]">
             Reclaimed Oak, Made Personal
           </h1>
           <p className="mt-4 max-w-[52ch] text-left text-[15px] font-light leading-[1.75] text-cream/88 lg:text-[16px]">

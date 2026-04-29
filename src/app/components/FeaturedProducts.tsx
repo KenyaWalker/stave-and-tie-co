@@ -43,7 +43,7 @@ const products: Product[] = [
 
 export default function FeaturedProducts() {
   return (
-    <section className="relative w-full overflow-hidden bg-espresso text-cream pt-20 lg:pt-24 pb-20 lg:pb-24">
+    <section className="relative w-full overflow-hidden bg-espresso text-cream pb-20 pt-10 lg:pb-24 lg:pt-12">
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-[min(60%,420px)] bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(216,177,90,0.07),transparent_70%)]"
         aria-hidden
