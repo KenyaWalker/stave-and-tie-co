@@ -9,22 +9,22 @@ export default function OurStoryPageBody() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_40%_at_100%_60%,rgba(62,38,22,0.35),transparent_50%)]" />
 
       <div className="relative">
-        <section className="reveal mx-auto max-w-[1480px] px-6 pb-14 pt-10 md:px-8 md:pb-16 md:pt-11 lg:px-12 lg:pb-16 lg:pt-12">
-          <div className="grid grid-cols-1 items-center gap-10 md:gap-12 lg:grid-cols-2 lg:gap-x-14 lg:gap-y-8">
-            <div className="mx-auto w-full max-w-[min(100%,480px)] justify-self-center lg:justify-self-end xl:max-w-[520px]">
-              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-sm bg-char/25 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.5)] ring-1 ring-cream/[0.06]">
+        <section className="reveal mx-auto max-w-[1480px] px-6 pb-14 pt-10 md:px-8 md:pb-16 md:pt-11 lg:px-12 lg:pb-20 lg:pt-14">
+          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-x-12 lg:gap-y-10 xl:gap-x-16">
+            <div className="mx-auto w-full max-w-[900px] lg:mx-0 lg:max-w-none lg:sticky lg:top-28">
+              <div className="relative aspect-[4/5] w-full max-h-[min(92svh,960px)] overflow-hidden rounded-sm bg-char/25 shadow-[0_12px_48px_-16px_rgba(0,0,0,0.55)] ring-1 ring-cream/[0.06] lg:aspect-[3/4] lg:max-h-[min(calc(100vh-7rem),960px)]">
                 <Image
                   src="/photos/our-story-hero.jpg"
                   alt="Lexington crew at the firehouse with Ladder 6"
                   fill
-                  className="object-cover object-[50%_42%]"
-                  sizes="(min-width: 1024px) 520px, 90vw"
+                  className="object-cover object-[50%_45%]"
+                  sizes="(min-width: 1024px) 48vw, 100vw"
                   priority
                 />
               </div>
             </div>
 
-            <div className="flex min-w-0 flex-col items-center justify-center text-center">
+            <div className="flex min-w-0 flex-col items-center justify-center text-center lg:pt-2">
               <div className="mx-auto w-full max-w-[40ch] space-y-5">
                 <p className="text-pretty text-[14px] font-light leading-[1.8] text-parchment/82 sm:text-[15px]">
                   As a firefighter and paramedic, he knows what it means to make something count. At the
