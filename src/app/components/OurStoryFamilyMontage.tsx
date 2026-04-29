@@ -13,7 +13,7 @@ export default function OurStoryFamilyMontage() {
         {COPY}
       </h2>
 
-      <div className="relative min-h-[min(58svh,28rem)] w-full">
+      <div className="relative min-h-[min(38svh,22rem)] w-full md:min-h-[min(40svh,24rem)]">
         <Image
           src="/photos/our-story-family-line.png"
           alt="Speaking at the podium in Lexington Fire Department dress uniform"

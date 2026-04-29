@@ -4,37 +4,37 @@ import OurStoryFamilyMontage from "./OurStoryFamilyMontage";
 
 export default function OurStoryPageBody() {
   return (
-    <article className="grain relative min-h-screen bg-espresso text-parchment">
+    <article className="grain relative bg-espresso text-parchment">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(75%_45%_at_50%_-5%,rgba(216,177,90,0.085),transparent_58%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_40%_at_100%_60%,rgba(62,38,22,0.35),transparent_50%)]" />
 
       <div className="relative">
-        <section className="reveal mx-auto max-w-[1400px] px-6 pb-16 pt-12 md:px-10 md:pb-20 lg:px-14 lg:pb-24 lg:pt-16">
-          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.12fr)] lg:gap-16 xl:gap-24">
-            <div className="mx-auto w-full max-w-[900px] lg:sticky lg:top-28">
-              <div className="relative aspect-[4/5] max-h-[min(90svh,900px)] w-full bg-char/25 lg:aspect-3/4 lg:max-h-[min(calc(100vh-8rem),900px)]">
+        <section className="reveal mx-auto max-w-[1480px] px-6 pb-14 pt-10 md:px-8 md:pb-16 md:pt-11 lg:px-12 lg:pb-16 lg:pt-12">
+          <div className="grid grid-cols-1 items-center gap-10 md:gap-12 lg:grid-cols-2 lg:gap-x-14 lg:gap-y-8">
+            <div className="mx-auto w-full max-w-[min(100%,480px)] justify-self-center lg:justify-self-end xl:max-w-[520px]">
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-sm bg-char/25 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.5)] ring-1 ring-cream/[0.06]">
                 <Image
                   src="/photos/our-story-hero.jpg"
                   alt="Lexington crew at the firehouse with Ladder 6"
                   fill
-                  className="object-cover object-[50%_45%]"
-                  sizes="(min-width: 1024px) 900px, 100vw"
+                  className="object-cover object-[50%_42%]"
+                  sizes="(min-width: 1024px) 520px, 90vw"
                   priority
                 />
               </div>
             </div>
 
-            <div className="flex min-w-0 flex-col items-center text-center lg:items-stretch lg:pt-2 lg:text-left">
-              <div className="mx-auto w-full max-w-[52ch] space-y-5 text-left lg:mx-0">
-                <p className="text-pretty text-[15px] font-light leading-[1.82] text-parchment/82 lg:text-[16px] lg:leading-[1.84]">
+            <div className="flex min-w-0 flex-col items-center justify-center text-center">
+              <div className="mx-auto w-full max-w-[40ch] space-y-5">
+                <p className="text-pretty text-[14px] font-light leading-[1.8] text-parchment/82 sm:text-[15px]">
                   As a firefighter and paramedic, he knows what it means to make something count. At the
                   bench, that same care goes into every barrel head, stave rack, and flight board.
                 </p>
-                <p className="text-pretty text-[14px] font-light leading-[1.75] text-parchment/75 lg:text-[15px]">
+                <p className="text-pretty text-[13.5px] font-light leading-[1.75] text-parchment/75 sm:text-[14px]">
                   Made from reclaimed barrel wood. Built one at a time. Finished like it matters.
                 </p>
-                <figure className="border-l-2 border-gilt-2/35 pl-5 pt-1 lg:pl-6">
-                  <blockquote className="display-italic text-[1rem] leading-snug text-cream/90 sm:text-[1.08rem]">
+                <figure className="mx-auto max-w-[36ch] border-t border-b border-gilt-2/25 py-5">
+                  <blockquote className="display-italic text-[0.95rem] leading-snug text-cream/90 sm:text-[1.05rem]">
                     &ldquo;If it carries your name, your station, your family, or your story, it deserves to
                     be made with care.&rdquo;
                   </blockquote>
@@ -46,8 +46,8 @@ export default function OurStoryPageBody() {
 
         <OurStoryFamilyMontage />
 
-        <section className="reveal relative border-t border-cream/[0.09] bg-char/40 px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-22">
-          <div className="mx-auto max-w-[1200px]">
+        <section className="reveal relative border-t border-cream/[0.09] bg-char/40 px-6 py-14 md:px-8 md:py-16 lg:px-12 lg:py-20">
+          <div className="mx-auto max-w-[1480px]">
             <p className="plate-bright tracking-[0.22em]">The Bench</p>
             <h2 className="mt-4 display text-[clamp(1.5rem,3.2vw,2.15rem)] leading-[1.12] text-cream text-balance max-w-[20ch] md:max-w-none">
               Retired barrel heads, oak and honest work.
@@ -141,7 +141,7 @@ export default function OurStoryPageBody() {
           </div>
         </section>
 
-        <section className="reveal relative overflow-hidden border-t border-cream/[0.1] bg-[#120a06] px-6 py-20 text-center text-cream md:py-28">
+        <section className="reveal relative overflow-hidden border-t border-cream/[0.1] bg-[#120a06] px-6 py-16 text-center text-cream md:py-24">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.08] bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(244,234,212,0.14)_2px,rgba(244,234,212,0.14)_3px)]"
             aria-hidden
