@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
-const inter = Inter({
-  variable: "--font-inter",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
   display: "swap",
 });
@@ -18,13 +18,13 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "The Stave & Tie Co. — Built With Purpose | Kentucky Bourbon Barrel Pieces",
+  title: "The Stave & Tie Co. | Custom Bourbon Barrel Art & Stave Goods",
   description:
-    "Handcrafted bourbon barrel pieces, made in Kentucky by a working firefighter. Custom barrel heads, stave coat racks, and flight boards — built one at a time.",
+    "Custom barrel head art, reclaimed stave coat racks, and bourbon flight boards handcrafted one at a time with care, character, and lasting meaning.",
   openGraph: {
-    title: "The Stave & Tie Co. — Built With Purpose",
+    title: "The Stave & Tie Co. | Custom Bourbon Barrel Art & Stave Goods",
     description:
-      "Handcrafted bourbon barrel pieces from Kentucky. Made by a working fireman.",
+      "Custom barrel head art, reclaimed stave coat racks, and bourbon flight boards handcrafted one at a time with care, character, and lasting meaning.",
     type: "website",
   },
 };
@@ -41,9 +41,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${manrope.variable} ${fraunces.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-espresso text-parchment">
+      <body className="min-h-full flex flex-col overflow-x-clip bg-espresso text-parchment">
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

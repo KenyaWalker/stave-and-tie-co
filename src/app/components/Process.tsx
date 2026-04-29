@@ -1,7 +1,7 @@
 const steps: { label: string; body: string; icon: React.ReactNode }[] = [
   {
-    label: "Design",
-    body: "Share your station, name, or sentiment. We shape the concept together before any carving starts.",
+    label: "Share the Idea",
+    body: "Send the name, date, logo, badge, phrase, reference photo, or rough concept you have in mind. It does not need to be perfect. A few details are enough to start.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.4} stroke="currentColor" aria-hidden>
         <path d="M3 21l3.5-1L20 6.5a2.1 2.1 0 1 0-3-3L3.5 17l-1 4Z" strokeLinecap="round" strokeLinejoin="round" />
@@ -10,8 +10,8 @@ const steps: { label: string; body: string; icon: React.ReactNode }[] = [
     ),
   },
   {
-    label: "Craft",
-    body: "Reclaimed white oak from retired bourbon barrels — engraved by hand in a Kentucky workshop.",
+    label: "Approve the Design",
+    body: "We turn your idea into a clean layout and send it over before engraving begins. You will know what the piece is going to look like before it touches the wood.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.4} stroke="currentColor" aria-hidden>
         <path d="M9 3l3 3-7 7-3-3 7-7Z" strokeLinejoin="round" />
@@ -21,8 +21,8 @@ const steps: { label: string; body: string; icon: React.ReactNode }[] = [
     ),
   },
   {
-    label: "Finish",
-    body: "Sanded smooth, sealed, and inspected — a finish you can feel as much as see.",
+    label: "Made by Hand",
+    body: "Your piece is engraved, sanded, sealed, and finished using reclaimed barrel wood with natural grain, character, warmth, and age.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.4} stroke="currentColor" aria-hidden>
         <path d="M4 14c2-1 5-1 8 0s6 1 8 0" strokeLinecap="round" />
@@ -32,8 +32,8 @@ const steps: { label: string; body: string; icon: React.ReactNode }[] = [
     ),
   },
   {
-    label: "Deliver",
-    body: "Wrapped, packaged, and shipped from Kentucky — ready to hang the day it arrives.",
+    label: "Ready for Home",
+    body: "Once finished, it is packed with care and sent ready to hang, gift, pour from, or put to use.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.4} stroke="currentColor" aria-hidden>
         <path d="M3 7h11v9H3z" strokeLinejoin="round" />
@@ -45,43 +45,83 @@ const steps: { label: string; body: string; icon: React.ReactNode }[] = [
   },
 ];
 
-export default function Process() {
+type ProcessProps = {
+  showBandHeader?: boolean;
+  /** "editorial" = paper/ink (e.g. home). "workshop" = char/cream (e.g. process page steps). */
+  variant?: "editorial" | "workshop";
+};
+
+export default function Process({ showBandHeader = true, variant = "editorial" }: ProcessProps) {
+  const workshop = variant === "workshop";
+
   return (
     <section
-      id="process"
-      className="relative w-full bg-paper text-ink pt-20 lg:pt-24 pb-20 lg:pb-24 scroll-mt-24"
+      className={`relative w-full overflow-hidden ${
+        workshop
+          ? "border-t border-cream/10 bg-char text-parchment pb-12 lg:pb-14"
+          : "bg-paper pb-10 text-ink lg:pb-12"
+      } ${showBandHeader ? "pt-10 lg:pt-12" : workshop ? "pt-10 lg:pt-12" : "pt-8 lg:pt-11"}`}
     >
-      <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 reveal">
-          <div>
-            <p className="plate-dark">The Process</p>
-            <h2 className="mt-4 display text-[clamp(2.2rem,5vw,4.2rem)] text-ink max-w-[18ch]">
-              Four steps.
-              <br />
-              <span className="display-italic text-[#7a5630]">No shortcuts.</span>
-            </h2>
+      {workshop ? (
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(ellipse_90%_100%_at_50%_0%,rgba(216,177,90,0.08),transparent_65%)]"
+          aria-hidden
+        />
+      ) : null}
+      <div className={`relative mx-auto max-w-[1480px] px-5 lg:px-10 ${workshop ? "lg:px-12" : ""}`}>
+        {showBandHeader && (
+          <div className="reveal flex flex-col gap-2 border-b border-ink/10 pb-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+            <div className="min-w-0">
+              <p className="plate-dark">The Process</p>
+              <h2 className="mt-1.5 display max-w-[26ch] text-[clamp(1.75rem,3.2vw,2.75rem)] leading-[0.98] text-ink">
+                Four steps. <span className="display-italic text-[#7a5630]">No shortcuts.</span>
+              </h2>
+            </div>
+            <p className="max-w-[36ch] shrink-0 text-[13px] leading-[1.55] text-ink/62">
+              One lane from first talk to delivery — same wood, same bench.
+            </p>
           </div>
-          <p className="text-ink/65 max-w-[42ch] leading-[1.8] text-[15px]">
-            Every commission moves the same way &mdash; from the first conversation to the day it
-            arrives at your door.
-          </p>
-        </div>
+        )}
 
-        <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-10 gap-y-12 reveal">
-          {steps.map((step, idx) => (
-            <div key={step.label} className="relative">
-              <div className="flex items-center gap-4">
-                <span className="block h-9 w-9 lg:h-10 lg:w-10 text-[#7a5630]">
+        <div
+          className={`reveal grid grid-cols-1 gap-x-10 gap-y-6 sm:grid-cols-2 sm:gap-y-7 lg:gap-x-12 ${
+            showBandHeader ? "mt-5 lg:mt-6" : "mt-0"
+          }`}
+        >
+          {steps.map((step) => (
+            <div
+              key={step.label}
+              className={
+                workshop
+                  ? "flex flex-row gap-3 rounded-sm border border-cream/10 bg-espresso/25 px-4 py-5 sm:gap-4 lg:gap-4 lg:px-5 lg:py-6"
+                  : "flex flex-row gap-3 lg:gap-4"
+              }
+            >
+              <div className="flex shrink-0 flex-col items-center gap-1.5 pt-0.5">
+                <span
+                  className={`block h-8 w-8 lg:h-9 lg:w-9 ${
+                    workshop ? "text-gilt-2" : "text-[#7a5630]"
+                  }`}
+                >
                   {step.icon}
                 </span>
-                <span className="text-[12px] tracking-[0.22em] uppercase text-ink/55">
-                  {String(idx + 1).padStart(2, "0")}
-                </span>
               </div>
-              <h3 className="mt-5 display text-[26px] lg:text-[30px] text-ink">{step.label}</h3>
-              <p className="mt-3 text-ink/70 text-[14.5px] leading-[1.75] max-w-[28ch]">
-                {step.body}
-              </p>
+              <div className="min-w-0">
+                <h3
+                  className={`display text-[1.15rem] leading-none lg:text-[1.35rem] ${
+                    workshop ? "text-cream" : "text-ink"
+                  }`}
+                >
+                  {step.label}
+                </h3>
+                <p
+                  className={`mt-2 text-[13px] leading-[1.6] lg:text-[13.5px] ${
+                    workshop ? "text-parchment/78" : "text-ink/68"
+                  }`}
+                >
+                  {step.body}
+                </p>
+              </div>
             </div>
           ))}
         </div>

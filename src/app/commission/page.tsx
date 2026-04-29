@@ -3,18 +3,20 @@ import PageHeader from "../components/PageHeader";
 import Commission from "../components/Commission";
 
 export const metadata: Metadata = {
-  title: "Commission — The Stave & Tie Co.",
+  title: "Custom Order | The Stave & Tie Co.",
   description:
-    "Start your custom engraved bourbon barrel wall art commission with The Stave & Tie Co.",
+    "Start a custom barrel head, bourbon stave coat rack, or flight board made from reclaimed barrel wood.",
 };
 
 export default function CommissionPage() {
   return (
     <>
       <PageHeader
-        title="Commission a Piece"
-        italic="premium custom, made local"
-        body="From first conversation to final delivery, your piece is built by hand in Kentucky and finished to last."
+        variant="editorial"
+        eyebrow="Custom Order"
+        title="Start with an idea. We'll help shape the rest."
+        body="A custom piece starts with a simple conversation. Tell us what you're imagining — a family name, station logo, wedding date, business mark, badge, phrase, or rough idea — and we'll help turn it into something worth hanging."
+        supporting="You'll see a design proof before the work begins, so there are no surprises once your piece is in the wood."
       />
       <Commission />
     </>

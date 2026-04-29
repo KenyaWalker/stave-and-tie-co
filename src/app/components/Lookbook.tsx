@@ -18,53 +18,149 @@ type Collection = {
   subtitle: string;
   price: string;
   cta: string;
+  supportingNote: string;
   pieces: Piece[];
 };
 
 const collections: Collection[] = [
   {
     id: "barrel-heads",
-    title: "Customizable Bourbon Barrel Heads",
-    subtitle: "Full-size engraved barrel heads for homes, weddings, firehouses, and businesses.",
-    price: "$159.99",
-    cta: "Order barrel head",
+    title: "Custom Barrel Head Art",
+    subtitle:
+      "Full-size reclaimed barrel heads engraved with family names, station logos, wedding details, business marks, military pieces, sports artwork, or personal designs.",
+    price: "Starting at $159.99",
+    cta: "Start a Barrel Head",
+    supportingNote:
+      "Best for statement wall art, firehouse gifts, home bars, wedding keepsakes, and custom family pieces.",
     pieces: [
-      { name: "Station One", detail: "Firehouse piece", src: "/photos/img_5927.jpg", alt: "Station One firehouse barrel head", focus: "object-[50%_45%]" },
-      { name: "The Beshears", detail: "Wedding monogram", src: "/photos/img_5793.jpg", alt: "Beshears monogram barrel head", focus: "object-[50%_45%]" },
-      { name: "Powered by Faith", detail: "Custom devotional", src: "/photos/img_6277.jpg", alt: "Powered by Faith barrel head", focus: "object-[50%_52%]" },
-      { name: "One Truck", detail: "Engine commission", src: "/photos/img_6306.jpg", alt: "One Truck custom barrel head", focus: "object-[50%_45%]" },
-      { name: "West Virginia 302", detail: "Department piece", src: "/photos/img_6011.jpg", alt: "West Virginia department barrel head", focus: "object-[50%_45%]" },
-      { name: "Kentucky Wildcats", detail: "Sports commission", src: "/photos/img_6029.jpg", alt: "Kentucky Wildcats barrel head", focus: "object-[50%_45%]" },
-      { name: "Reed", detail: "Wedding keepsake", src: "/photos/img_6074.jpg", alt: "Reed wedding barrel head", focus: "object-[50%_45%]" },
-      { name: "Fire Commission", detail: "Institutional piece", src: "/photos/img_6009.jpg", alt: "Kentucky Fire Commission barrel head", focus: "object-[50%_45%]" },
-      { name: "Customer Delivery", detail: "Local trust", src: "/photos/img_6329.jpg", alt: "Paramedic with delivered custom barrel head", focus: "object-[50%_30%]" },
-      { name: "Station 16", detail: "Department delivery", src: "/photos/img_6089.jpg", alt: "Station 16 custom barrel head delivery", focus: "object-[50%_50%]" },
+      {
+        name: "Station One",
+        detail: "Firehouse piece",
+        src: "/photos/img_5927.jpg",
+        alt: "Station One firehouse barrel head",
+        focus: "object-[50%_45%]",
+      },
+      {
+        name: "The Beshears",
+        detail: "Wedding monogram",
+        src: "/photos/img_5793.jpg",
+        alt: "Beshears monogram barrel head",
+        focus: "object-[50%_45%]",
+      },
+      {
+        name: "Powered by Faith",
+        detail: "Custom devotional",
+        src: "/photos/img_6277.jpg",
+        alt: "Powered by Faith barrel head",
+        focus: "object-[50%_52%]",
+      },
+      {
+        name: "One Truck",
+        detail: "Engine house",
+        src: "/photos/img_6306.jpg",
+        alt: "One Truck custom barrel head",
+        focus: "object-[50%_45%]",
+      },
+      {
+        name: "West Virginia 302",
+        detail: "Department piece",
+        src: "/photos/img_6011.jpg",
+        alt: "West Virginia department barrel head",
+        focus: "object-[50%_45%]",
+      },
+      {
+        name: "Kentucky Wildcats",
+        detail: "Sports artwork",
+        src: "/photos/img_6029.jpg",
+        alt: "Kentucky Wildcats barrel head",
+        focus: "object-[50%_45%]",
+      },
+      {
+        name: "Reed",
+        detail: "Wedding keepsake",
+        src: "/photos/img_6074.jpg",
+        alt: "Reed wedding barrel head",
+        focus: "object-[50%_45%]",
+      },
+      {
+        name: "Agency seal",
+        detail: "Institutional barrel head",
+        src: "/photos/img_6009.jpg",
+        alt: "Institutional seal engraved on bourbon barrel head",
+        focus: "object-[50%_45%]",
+      },
+      {
+        name: "Crew hand-off",
+        detail: "Delivered barrel head",
+        src: "/photos/img_6329.jpg",
+        alt: "Paramedic with delivered custom barrel head",
+        focus: "object-[50%_30%]",
+      },
+      {
+        name: "Station 16",
+        detail: "Department delivery",
+        src: "/photos/img_6089.jpg",
+        alt: "Station 16 custom barrel head delivery",
+        focus: "object-[50%_50%]",
+      },
     ],
   },
   {
     id: "coat-racks",
-    title: "Handcrafted Bourbon Barrel Stave Coat Racks",
-    subtitle: "Wall-mounted stave racks with dark western styling and premium reclaimed wood finish.",
-    price: "$59.99",
-    cta: "Order coat rack",
+    title: "Bourbon Stave Coat Racks",
+    subtitle:
+      "Wall-mounted coat racks made from reclaimed bourbon barrel staves, finished with warm grain, dark character, and practical everyday use.",
+    price: "Starting at $59.99",
+    cta: "Start a Stave Rack",
+    supportingNote: "Best for entryways, mudrooms, offices, cabins, garages, and bourbon rooms.",
     pieces: [
-      { name: "Hat Wall Pair", detail: "Dual hat display", src: "/photos/img_5662.jpg", alt: "White and dark hats on handcrafted stave rack", focus: "object-[50%_50%]" },
-      { name: "White Hat + Denim", detail: "Lifestyle setup", src: "/photos/img_5664.jpg", alt: "White hat and denim on handcrafted stave rack", focus: "object-[52%_48%]" },
-      { name: "Stave Rack Detail", detail: "Rich brown finish", src: "/video/strip-5639-poster.jpg", alt: "Close-up of handcrafted stave coat rack", focus: "object-[50%_48%]" },
-      { name: "Mounted in Home", detail: "Premium interior look", src: "/video/hero-5641-poster.jpg", alt: "Coat rack mounted in styled home interior", focus: "object-[50%_44%]" },
+      {
+        name: "Two-post rack",
+        detail: "Wall-mounted oak",
+        src: "/photos/img_5662.jpg",
+        alt: "Handcrafted bourbon stave coat rack with two pegs on a wall",
+        focus: "object-[50%_50%]",
+      },
+      {
+        name: "Stave pegs",
+        detail: "Hall install",
+        src: "/photos/img_5664.jpg",
+        alt: "Reclaimed stave rack mounted in a home interior",
+        focus: "object-[52%_48%]",
+      },
+      {
+        name: "Installed rack",
+        detail: "Customer space",
+        src: "/video/hero-5641-poster.jpg",
+        alt: "Stave coat rack installed in a customer home",
+        focus: "object-[50%_44%]",
+      },
     ],
   },
   {
     id: "flight-boards",
-    title: "Flight Boards",
-    subtitle: "Handcrafted bourbon barrel flight boards for bars, mantels, and gift-ready setups.",
-    price: "$39.99",
-    cta: "Order flight board",
+    title: "Bourbon Flight Boards",
+    subtitle:
+      "Handcrafted tasting boards made for bourbon pours, home bars, gifts, mantels, and gatherings with people who appreciate a good pour.",
+    price: "Starting at $39.99",
+    cta: "Start a Flight Board",
+    supportingNote:
+      "Best for bourbon lovers, groomsmen gifts, Father’s Day, housewarming gifts, and home bar setups.",
     pieces: [
-      { name: "Bourbon Flight Board", detail: "Core product", src: "/photos/img_6098.jpg", alt: "Handcrafted bourbon barrel flight board", focus: "object-[50%_52%]" },
-      { name: "Candle + Flight Setup", detail: "Home bar styling", src: "/photos/img_5671.jpg", alt: "Flight board with candlelit home setup", focus: "object-[50%_48%]" },
-      { name: "Bar Detail", detail: "Styled display", src: "/video/fireplace-poster.jpg", alt: "Bourbon bar setup with handcrafted flight board", focus: "object-[50%_60%]" },
-      { name: "Whiskey Tasting Scene", detail: "Gift-ready look", src: "/video/hero-poster.jpg", alt: "Whiskey tasting setup with handcrafted board", focus: "object-[50%_58%]" },
+      {
+        name: "Bourbon Flight Board",
+        detail: "Core product",
+        src: "/photos/img_6098.jpg",
+        alt: "Handcrafted bourbon barrel flight board",
+        focus: "object-[50%_52%]",
+      },
+      {
+        name: "Mantel setup",
+        detail: "Bar or mantel",
+        src: "/video/fireplace-poster.jpg",
+        alt: "Bourbon flight board with bar glassware on a mantel",
+        focus: "object-[50%_60%]",
+      },
     ],
   },
 ];
@@ -80,18 +176,18 @@ export default function Lookbook() {
   };
 
   return (
-    <section className="relative w-full bg-espresso text-parchment pb-22 lg:pb-28">
-      <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
-        <p className="plate-bright !tracking-[0.22em]">Shop by collection</p>
-        <h2 className="mt-4 display text-[clamp(2rem,4.4vw,3.8rem)] text-cream">
-          Three product lines.
-          <br />
-          <span className="display-italic text-gilt-2">Faster path to purchase.</span>
-        </h2>
+    <section
+      aria-label="Shop gallery"
+      className="relative w-full overflow-hidden bg-espresso pb-20 text-parchment lg:pb-28"
+    >
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-[min(55vh,480px)] bg-[radial-gradient(ellipse_90%_55%_at_50%_0%,rgba(216,177,90,0.08),transparent_65%)]"
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-[1480px] px-6 pb-10 pt-10 lg:px-12 lg:pb-11 lg:pt-12">
+        <div className="rule-warm mx-auto max-w-[min(100%,64rem)] opacity-90" />
 
-        <div className="rule mt-10" />
-
-        <div className="mt-10 space-y-14 lg:space-y-18">
+        <div className="mt-12 space-y-16 lg:mt-14 lg:space-y-20">
           {collections.map((collection) => (
             <section key={collection.id} id={collection.id} className="space-y-5">
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
@@ -103,9 +199,12 @@ export default function Lookbook() {
                     </span>
                   </div>
                   <p className="mt-2 text-parchment/78 leading-[1.8]">{collection.subtitle}</p>
+                  <p className="mt-4 max-w-[52ch] text-[13px] font-light leading-[1.65] text-parchment/60">
+                    {collection.supportingNote}
+                  </p>
                 </div>
 
-                <div className="flex items-center gap-2.5">
+                <div className="flex shrink-0 flex-wrap items-center gap-2.5">
                   <button
                     type="button"
                     onClick={() => scroll(collection.id, "prev")}
@@ -132,7 +231,7 @@ export default function Lookbook() {
                 ref={(el) => {
                   refs.current[collection.id] = el;
                 }}
-                className="no-scrollbar overflow-x-auto snap-x snap-mandatory"
+                className="no-scrollbar -mx-1 overflow-x-auto snap-x snap-mandatory px-1 sm:mx-0 sm:px-0"
               >
                 <div className="flex gap-4 lg:gap-5 min-w-max pb-2">
                   {collection.pieces.map((piece) => (
@@ -140,7 +239,7 @@ export default function Lookbook() {
                       key={piece.src + piece.name}
                       className="w-[78vw] sm:w-[44vw] lg:w-[29vw] xl:w-[24vw] shrink-0 snap-start"
                     >
-                      <div className="relative aspect-[4/5] overflow-hidden border border-parchment/15 bg-char">
+                      <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-parchment/15 bg-char shadow-[0_8px_28px_-12px_rgba(0,0,0,0.45)] ring-1 ring-inset ring-white/[0.04]">
                         <Image
                           src={piece.src}
                           alt={piece.alt}
@@ -148,12 +247,15 @@ export default function Lookbook() {
                           sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 29vw, (min-width: 640px) 44vw, 78vw"
                           className={`object-cover transition-transform duration-700 hover:scale-[1.03] ${piece.focus ?? ""}`}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/58 via-transparent to-transparent" />
                       </div>
 
-                      <div className="mt-3">
-                        <h4 className="display text-[30px] text-cream leading-[0.95]">{piece.name}</h4>
-                        <p className="mt-1 text-parchment/72 text-[12px] tracking-[0.08em] uppercase">{piece.detail}</p>
+                      <div className="mt-3 space-y-1">
+                        <h4 className="display text-[1.2rem] leading-tight text-cream sm:text-[1.35rem]">
+                          {piece.name}
+                        </h4>
+                        <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-parchment/65">
+                          {piece.detail}
+                        </p>
                       </div>
                     </article>
                   ))}

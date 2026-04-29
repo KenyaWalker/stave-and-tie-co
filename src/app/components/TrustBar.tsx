@@ -1,18 +1,7 @@
 const items: { title: string; body: string; icon: React.ReactNode }[] = [
   {
-    title: "Crafted by a Working Fireman",
-    body: "Built between shifts. Real discipline, real hands.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.4} stroke="currentColor" aria-hidden>
-        <path d="M5 17V11a7 7 0 0 1 14 0v6" strokeLinecap="round" />
-        <path d="M3 17h18" strokeLinecap="round" />
-        <path d="M12 4v3" strokeLinecap="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Authentic Bourbon Barrels",
-    body: "Reclaimed white oak from retired barrels.",
+    title: "Real Barrel Wood",
+    body: "Reclaimed oak with grain, char, rings, and character you can see.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.4} stroke="currentColor" aria-hidden>
         <ellipse cx="12" cy="12" rx="6" ry="9" />
@@ -21,18 +10,8 @@ const items: { title: string; body: string; icon: React.ReactNode }[] = [
     ),
   },
   {
-    title: "Made in Kentucky",
-    body: "Designed, carved, and finished here.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.4} stroke="currentColor" aria-hidden>
-        <path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z" strokeLinejoin="round" />
-        <circle cx="12" cy="9" r="2.5" />
-      </svg>
-    ),
-  },
-  {
-    title: "Each Piece Made to Order",
-    body: "No two alike. Yours, only yours.",
+    title: "Made to Order",
+    body: "Every piece is created around your names, dates, logos, or story.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.4} stroke="currentColor" aria-hidden>
         <path d="M4 7l8-4 8 4v10l-8 4-8-4V7Z" strokeLinejoin="round" />
@@ -40,23 +19,52 @@ const items: { title: string; body: string; icon: React.ReactNode }[] = [
       </svg>
     ),
   },
+  {
+    title: "One Maker's Standard",
+    body: "Designed, engraved, finished, and checked with care before it leaves the bench.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.4} stroke="currentColor" aria-hidden>
+        <path
+          d="M4 20h13M7 20V11l8-8 3 3-8 8H7Z"
+          strokeLinejoin="round"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Ready to Display",
+    body: "Finished pieces arrive sealed, polished, and ready for the room they were made for.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.4} stroke="currentColor" aria-hidden>
+        <path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z" strokeLinejoin="round" />
+        <circle cx="12" cy="9" r="2.5" />
+      </svg>
+    ),
+  },
 ];
 
 export default function TrustBar() {
   return (
-    <section className="grain relative w-full bg-espresso text-cream py-12 lg:py-16 border-y border-cream/10">
-      <div className="mx-auto max-w-[1480px] px-6 lg:px-12">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-10 gap-y-10">
+    <section
+      aria-label="What stays true in every piece"
+      className="relative w-full overflow-hidden border-t border-ink/10 bg-paper py-14 text-ink lg:py-16"
+    >
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-48 bg-[radial-gradient(ellipse_80%_100%_at_50%_0%,rgba(142,94,44,0.06),transparent_70%)]"
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-[1480px] px-6 lg:px-12">
+        <h2 className="display max-w-[40ch] text-[clamp(1.65rem,3vw,2.35rem)] leading-snug text-ink">
+          What stays true in every piece.
+        </h2>
+        <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-12 lg:mt-14 lg:grid-cols-4 lg:gap-x-10">
           {items.map((item) => (
             <div key={item.title} className="flex flex-col items-start gap-4">
-              <span className="block h-8 w-8 lg:h-9 lg:w-9 text-gilt-2">{item.icon}</span>
+              <span className="block h-8 w-8 text-bronze lg:h-9 lg:w-9">{item.icon}</span>
               <div>
-                <h3 className="display text-[18px] lg:text-[20px] text-cream leading-tight">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-cream/65 text-[13.5px] leading-[1.6] max-w-[26ch]">
-                  {item.body}
-                </p>
+                <h3 className="display text-[17px] leading-snug text-ink lg:text-[19px]">{item.title}</h3>
+                <p className="mt-2.5 max-w-[28ch] text-[13.5px] leading-[1.65] text-ink/65">{item.body}</p>
               </div>
             </div>
           ))}

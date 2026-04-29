@@ -1,89 +1,116 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ETSY_SHOP_URL } from "../../lib/external-links";
+
+const TEL_HREF = "tel:+18596910852";
+const TEL_LABEL = "(859) 691-0852";
+const EMAIL = "2justinwalker3@gmail.com";
 
 const navLinks: { href: string; label: string }[] = [
-  { href: "/collection", label: "Shop" },
+  { href: "/shop", label: "Shop" },
   { href: "/our-story", label: "Our Story" },
-  { href: "/#process", label: "Process" },
-  { href: "/commission", label: "Contact" },
+  { href: "/process", label: "Process" },
+  { href: "/commission", label: "Custom Order" },
 ];
 
 const social: { href: string; label: string }[] = [
-  { href: "#", label: "Instagram" },
-  { href: "#", label: "Etsy" },
+  { href: "https://www.instagram.com/thestaveandtieco/", label: "Instagram" },
+  { href: "https://www.facebook.com/TheStaveandTieCo", label: "Facebook" },
+  { href: ETSY_SHOP_URL, label: "Etsy" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#150c06] text-cream/80 border-t border-cream/10">
-      <div className="mx-auto max-w-[1480px] px-6 lg:px-12 pt-16 lg:pt-20 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
-          <div className="md:col-span-5">
-            <Link href="/" className="inline-flex items-center gap-3">
-              <span className="relative h-9 w-9 rounded-full overflow-hidden border border-cream/15 bg-white/95 shrink-0">
+    <footer className="relative border-t border-transparent bg-paper text-ink">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gilt/35 to-transparent"
+        aria-hidden
+      />
+      <div className="mx-auto flex w-full max-w-2xl flex-col items-center px-5 py-8 sm:py-9 md:px-8">
+        <div className="mx-auto w-full max-w-[40ch] text-center">
+          <div className="flex justify-center">
+            <Link
+              href="/"
+              className="relative inline-block transition-opacity hover:opacity-85 focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-ink/25 focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+            >
+              <span className="absolute right-full top-1/2 mr-2.5 size-8 -translate-y-1/2 overflow-hidden rounded-full border border-ink/12 bg-white">
                 <Image
                   src="/brand/logo-5670.jpg"
-                  alt="The Stave & Tie Co."
+                  alt=""
                   fill
-                  sizes="36px"
+                  sizes="32px"
                   className="object-cover"
                 />
               </span>
-              <span className="display text-[20px] text-cream leading-none">
-                The Stave <span className="display-italic text-gilt-2">&amp;</span> Tie Co.
+              <span className="display text-[1.05rem] leading-none sm:text-[1.15rem]">
+                The Stave &amp; Tie Co.
               </span>
             </Link>
-            <p className="mt-5 text-cream/65 text-[14px] leading-[1.75] max-w-[34ch]">
-              Handcrafted bourbon barrel pieces, made in Kentucky by a working fireman.
-            </p>
           </div>
 
-          <div className="md:col-span-3">
-            <p className="plate-bright">Explore</p>
-            <ul className="mt-5 space-y-2.5">
-              {navLinks.map((l) => (
-                <li key={l.href}>
-                  <Link
-                    href={l.href}
-                    className="text-cream/75 hover:text-cream text-[14px] transition-colors"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <p className="mt-4 text-pretty text-[13.5px] font-light leading-[1.65] text-ink/68">
+            Custom barrel head art, stave racks, and flight boards made by hand from reclaimed barrel
+            wood.
+          </p>
+        </div>
 
-          <div className="md:col-span-4">
-            <p className="plate-bright">Contact</p>
-            <ul className="mt-5 space-y-2.5 text-[14px]">
-              <li>
-                <a
-                  href="mailto:hello@staveandtie.co"
-                  className="text-cream/75 hover:text-cream transition-colors"
+        <nav className="mt-5 w-full text-center" aria-label="Footer navigation">
+          <ul className="flex flex-wrap items-center justify-center gap-y-2 text-[13px] [&>li]:flex [&>li]:items-center">
+            {navLinks.map((l, i) => (
+              <li key={l.href}>
+                {i > 0 ? (
+                  <span className="mx-2.5 text-ink/25 sm:mx-3" aria-hidden>
+                    ·
+                  </span>
+                ) : null}
+                <Link
+                  href={l.href}
+                  className="whitespace-nowrap px-0.5 text-ink/78 transition-colors hover:text-ink focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-ink/25 focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
                 >
-                  hello@staveandtie.co
-                </a>
+                  {l.label}
+                </Link>
               </li>
-              <li className="text-cream/60">Lexington, Kentucky</li>
-            </ul>
-            <div className="mt-6 flex items-center gap-5">
-              {social.map((s) => (
+            ))}
+          </ul>
+        </nav>
+
+        <div className="mt-5 flex w-full flex-col items-center justify-center gap-2.5 sm:w-auto sm:flex-row sm:gap-3">
+          <a
+            href={TEL_HREF}
+            aria-label={`Call ${TEL_LABEL}`}
+            className="inline-flex w-full min-w-48 max-w-[20rem] items-center justify-center border border-ink px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-ink hover:text-cream focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-ink/30 focus-visible:ring-offset-2 focus-visible:ring-offset-paper sm:w-auto sm:max-w-none"
+          >
+            Call
+          </a>
+          <a
+            href={`mailto:${EMAIL}`}
+            className="inline-flex w-full min-w-48 max-w-[20rem] items-center justify-center border border-ink px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-ink hover:text-cream focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-ink/30 focus-visible:ring-offset-2 focus-visible:ring-offset-paper sm:w-auto sm:max-w-none"
+          >
+            Email the Shop
+          </a>
+        </div>
+
+        <nav className="mt-6 flex w-full justify-center" aria-label="Social and marketplace">
+          <ul className="flex flex-col items-center gap-2.5 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-3">
+            {social.map((s) => (
+              <li key={s.label} className="w-full sm:w-auto">
                 <a
-                  key={s.label}
                   href={s.href}
-                  className="text-cream/70 hover:text-cream text-[13px] tracking-[0.18em] uppercase transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full min-w-48 items-center justify-center border border-ink/35 px-4 py-2 text-[10px] font-medium uppercase tracking-[0.22em] text-ink/78 transition-colors hover:border-ink hover:bg-ink hover:text-cream focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-ink/30 focus-visible:ring-offset-2 focus-visible:ring-offset-paper sm:min-w-32 sm:max-w-none"
                 >
                   {s.label}
                 </a>
-              ))}
-            </div>
-          </div>
-        </div>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        <div className="mt-14 pt-6 border-t border-cream/10 flex flex-col md:flex-row items-center justify-between gap-3 text-cream/55 text-[12px]">
-          <span>© {new Date().getFullYear()} The Stave &amp; Tie Co. All rights reserved.</span>
-          <span>Made in Kentucky</span>
+        <div className="mt-6 w-full border-t border-ink/10 pt-5 text-center text-[11px] leading-relaxed text-ink/50">
+          <p className="text-pretty">
+            Handcrafted in Kentucky · Firefighter-owned · Made one at a time
+          </p>
         </div>
       </div>
     </footer>

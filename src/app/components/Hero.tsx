@@ -4,12 +4,11 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="grid min-h-dvh w-full grid-cols-1 bg-[#0a0705] text-cream lg:grid-cols-[minmax(0,1fr)_minmax(300px,26rem)]"
+      className="grid w-full min-h-[50dvh] grid-cols-1 gap-0 overflow-hidden bg-[#0d0907] text-cream lg:min-h-[min(100dvh,56rem)] lg:grid-cols-[minmax(0,1fr)_minmax(300px,26rem)]"
     >
-      {/* Wood / video — anchored to bottom so the lower frame isn’t cropped away */}
-      <div className="relative h-[min(58dvh,520px)] overflow-hidden bg-[#0c0805] lg:h-auto lg:min-h-dvh">
+      <div className="relative min-h-[50dvh] min-w-0 w-full max-w-none overflow-hidden bg-[#050403] lg:min-h-[min(100dvh,56rem)] shadow-[12px_0_48px_-24px_rgba(0,0,0,0.65)]">
         <video
-          className="absolute inset-0 h-full w-full object-cover object-bottom"
+          className="absolute inset-0 box-border h-full w-full min-h-full min-w-full max-w-none border-0 object-cover object-center outline-none ring-0"
           src="/video/hero-5639.mp4"
           poster="/video/hero-5639-poster.jpg"
           autoPlay
@@ -19,31 +18,43 @@ export default function Hero() {
           preload="auto"
           aria-hidden
         />
-        {/* Theatrical depth: warm shadow pool at bottom, subtle top falloff */}
-        <div className="pointer-events-none absolute inset-0 bg-[#1f140c]/22 mix-blend-multiply" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0a0705]/50 via-transparent to-[#070504]/55" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#120c08]/45 lg:to-[#0a0705]/55" />
+        <div className="pointer-events-none absolute inset-0 bg-[#4a241c]/26 mix-blend-multiply" />
+        <div className="pointer-events-none absolute inset-0 bg-[#3d1f18]/18 mix-blend-soft-light" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#341815]/42 via-transparent to-[#140a08]/48" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-[#1a0e0a]/15 to-[#0d0907]/75" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-[2] hidden w-px bg-gradient-to-b from-transparent via-cream/25 to-transparent lg:block" aria-hidden />
       </div>
 
-      {/* Copy panel — deep walnut, reads as one piece with the video */}
-      <div className="grain relative flex flex-col justify-center border-[#2a2118]/80 bg-[#0e0906] px-6 py-14 sm:px-8 lg:min-h-dvh lg:border-l lg:border-t-0 lg:px-10 lg:pb-20 lg:pt-32 xl:px-12">
+      <div className="grain relative flex min-w-0 flex-col justify-start border-0 border-t border-[#2a1814]/80 bg-[linear-gradient(180deg,rgba(216,177,90,0.05)_0%,transparent_42%),#120d0b] px-6 py-12 sm:px-8 sm:py-14 lg:min-h-[min(100dvh,56rem)] lg:border-l lg:border-t-0 lg:border-[#2a1814]/60 lg:px-10 lg:pb-16 lg:pt-[max(6.5rem,calc(4.75rem+env(safe-area-inset-top)))] xl:px-12 lg:shadow-[-16px_0_40px_-28px_rgba(0,0,0,0.45)]">
         <div className="reveal">
-          <p className="plate-bright">Kentucky · Made by a Working Fireman</p>
-          <h1 className="mt-4 display text-[clamp(2.5rem,4.2vw,3.85rem)] text-cream leading-[0.94] xl:text-[clamp(2.6rem,3.6vw,4rem)]">
-            Built With Purpose.
+          <p className="plate-bright">The Stave &amp; Tie Co.</p>
+          <h1 className="mt-4 display text-[clamp(2.35rem,4.3vw,3.65rem)] text-cream leading-[0.94] xl:text-[clamp(2.45rem,3.8vw,3.85rem)]">
+            Reclaimed Oak, Made Personal
           </h1>
-          <p className="mt-5 text-cream/85 text-[15px] leading-[1.7] font-light lg:text-[16px]">
-            Handcrafted bourbon barrel pieces, made in Kentucky by a working fireman.
+          <p className="mt-5 max-w-[42ch] text-[15px] font-light leading-[1.75] text-cream/88 lg:text-[16px]">
+            Custom barrel head art, stave coat racks, and bourbon flight boards handcrafted with care,
+            character, and a finish made to last.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Link href="/commission" className="btn-gilt justify-center sm:justify-start">
-              Start Your Piece <span aria-hidden>→</span>
+            <Link href="/our-story" className="btn-gilt justify-center sm:justify-start">
+              Learn Our Story <span aria-hidden>→</span>
             </Link>
-            <Link href="/collection" className="btn-ghost justify-center sm:justify-start">
-              View Collection <span aria-hidden>→</span>
+            <Link href="/shop" className="btn-ghost justify-center sm:justify-start">
+              Explore the Shop <span aria-hidden>→</span>
             </Link>
           </div>
+          <p className="mt-8">
+            <Link
+              href="/commission"
+              className="link-rule font-medium text-cream/80 text-[11px] tracking-[0.22em] uppercase hover:text-gilt-2"
+            >
+              Custom Order <span aria-hidden>→</span>
+            </Link>
+            <span className="mt-2 block max-w-[38ch] text-[13px] font-light leading-[1.65] text-cream/55 sm:mt-1 sm:inline sm:ml-3 sm:max-w-none sm:text-[13px]">
+              when you&apos;re ready for a one-of-a-kind piece.
+            </span>
+          </p>
         </div>
       </div>
     </section>
