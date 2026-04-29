@@ -42,7 +42,7 @@ export default function OurStoryFamilyMontage() {
         <div className="pointer-events-none absolute inset-0 z-[1] bg-[#120805]/35" aria-hidden />
 
         <div className="absolute inset-0 z-10 mx-auto flex max-w-[52rem] items-center justify-center px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:py-24">
-          <p className="display -translate-y-8 inline-flex max-w-none flex-row flex-nowrap items-baseline justify-center gap-0 whitespace-nowrap text-[clamp(0.95rem,4.2vw,3.65rem)] leading-[1.12] tracking-[-0.03em] [text-shadow:none] shadow-none ring-0 outline-none border-0 sm:tracking-[-0.02em] md:-translate-y-12 lg:-translate-y-16 xl:-translate-y-20">
+          <p className="display -translate-y-16 inline-flex max-w-none flex-row flex-nowrap items-baseline justify-center gap-0 whitespace-nowrap text-[clamp(0.72rem,2.85vw,2.5rem)] leading-[1.14] tracking-[-0.03em] [text-shadow:none] shadow-none ring-0 outline-none border-0 sm:tracking-[-0.02em] md:-translate-y-20 lg:-translate-y-24 xl:-translate-y-28">
             <span className="shrink-0 text-cream [text-shadow:none] shadow-none ring-0 outline-none">A family man, </span>
             <span className="display-italic shrink-0 text-gilt-2 [text-shadow:none] shadow-none ring-0 outline-none">serving the community that raised him.</span>
           </p>
