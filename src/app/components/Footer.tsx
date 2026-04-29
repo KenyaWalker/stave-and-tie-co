@@ -111,6 +111,9 @@ export default function Footer() {
           <p className="text-pretty">
             Handcrafted in Kentucky · Firefighter-owned · Made one at a time
           </p>
+          <p className="mt-3 text-[10px] italic leading-snug text-ink/42">
+            A Walker Studio build
+          </p>
         </div>
       </div>
     </footer>

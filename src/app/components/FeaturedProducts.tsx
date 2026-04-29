@@ -52,10 +52,10 @@ export default function FeaturedProducts() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 reveal">
           <div className="max-w-[50ch]">
             <p className="plate-bright">Featured Work</p>
-            <h2 className="mt-4 display text-[clamp(2.1rem,4.5vw,4rem)] text-cream max-w-[22ch] text-balance leading-[0.98]">
+            <h2 className="mt-4 display text-[clamp(1.85rem,3.6vw,3.25rem)] text-cream max-w-[22ch] text-balance leading-[0.98]">
               Custom pieces with weight, warmth, and story.
             </h2>
-            <p className="mt-4 text-[14.5px] font-light leading-[1.75] text-parchment/72 max-w-[48ch]">
+            <p className="mt-4 text-[13px] font-light leading-[1.72] text-parchment/72 max-w-[48ch] lg:text-[14px]">
               From family names and firehouse logos to wedding gifts, home bars, and bourbon rooms,
               every piece starts with reclaimed barrel wood and ends with something made just for you.
             </p>

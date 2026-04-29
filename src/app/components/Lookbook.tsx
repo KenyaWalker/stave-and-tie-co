@@ -193,12 +193,14 @@ export default function Lookbook() {
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
                 <div className="max-w-3xl">
                   <div className="flex flex-wrap items-center gap-3">
-                    <h3 className="display text-[clamp(1.9rem,4vw,3.2rem)] text-cream">{collection.title}</h3>
+                    <h3 className="display text-[clamp(1.45rem,3.1vw,2.35rem)] leading-[1.08] text-cream">
+                      {collection.title}
+                    </h3>
                     <span className="inline-flex items-center border border-gilt/60 bg-[#1d120a] px-3 py-1 text-[12px] tracking-[0.08em] uppercase text-gilt-2">
                       {collection.price}
                     </span>
                   </div>
-                  <p className="mt-2 text-parchment/78 leading-[1.8]">{collection.subtitle}</p>
+                  <p className="mt-2 text-[13px] font-light leading-[1.72] text-parchment/72 lg:text-[14px]">{collection.subtitle}</p>
                   <p className="mt-4 max-w-[52ch] text-[13px] font-light leading-[1.65] text-parchment/60">
                     {collection.supportingNote}
                   </p>

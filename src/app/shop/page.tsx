@@ -25,10 +25,10 @@ export default function ShopPage() {
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between md:gap-12">
             <div className="max-w-[42ch]">
               <p className="font-mono text-[10px] uppercase tracking-[0.26em] text-gilt-2">Next Step</p>
-              <h2 className="mt-3 text-balance display text-[clamp(1.85rem,3.8vw,3.15rem)] leading-[0.98] text-cream">
+              <h2 className="mt-3 text-balance display text-[clamp(1.35rem,2.85vw,2.1rem)] leading-[1.05] text-cream">
                 Have an idea in mind?
               </h2>
-              <p className="mt-4 text-pretty text-[15px] font-light leading-[1.85] text-parchment/75">
+              <p className="mt-4 text-pretty text-[13px] font-light leading-[1.75] text-parchment/75 lg:text-[14px]">
                 Send the names, dates, logos, or details you want included. We&apos;ll help turn the idea
                 into a clean design before the work begins.
               </p>
