@@ -43,7 +43,7 @@ const collections: Collection[] = [
       {
         name: "The Beshears",
         detail: "Wedding monogram",
-        src: "/photos/img_5793.jpg",
+        src: "/photos/composite-split/beshears-barrel-monogram.jpg",
         alt: "Beshears monogram barrel head",
         focus: "object-[50%_45%]",
       },
@@ -64,21 +64,21 @@ const collections: Collection[] = [
       {
         name: "West Virginia 302",
         detail: "Department piece",
-        src: "/photos/img_6011.jpg",
+        src: "/photos/composite-split/wv-302-department-emblem.jpg",
         alt: "West Virginia department barrel head",
         focus: "object-[50%_45%]",
       },
       {
         name: "Kentucky Wildcats",
         detail: "Sports artwork",
-        src: "/photos/img_6029.jpg",
+        src: "/photos/composite-split/kentucky-wildcats-barrel.jpg",
         alt: "Kentucky Wildcats barrel head",
         focus: "object-[50%_45%]",
       },
       {
         name: "Reed",
         detail: "Wedding keepsake",
-        src: "/photos/img_6074.jpg",
+        src: "/photos/composite-split/reed-barrel-monogram.jpg",
         alt: "Reed wedding barrel head",
         focus: "object-[50%_45%]",
       },
@@ -150,7 +150,7 @@ const collections: Collection[] = [
       {
         name: "Bourbon Flight Board",
         detail: "Core product",
-        src: "/photos/img_6098.jpg",
+        src: "/photos/composite-split/flight-board-staves.jpg",
         alt: "Handcrafted bourbon barrel flight board",
         focus: "object-[50%_52%]",
       },

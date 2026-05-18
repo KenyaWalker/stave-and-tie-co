@@ -36,8 +36,8 @@ const products: Product[] = [
     name: "Bourbon Flight Board",
     body: "A handcrafted tasting board made for home bars, gifts, gatherings, and slow pours.",
     price: "Starting at $39.99",
-    src: "/photos/flight-board-bottles.png",
-    alt: "Handcrafted bourbon barrel stave flight board with Glencairn glasses and premium bottles",
+    src: "/photos/composite-split/flight-board-staves.jpg",
+    alt: "Handcrafted bourbon barrel stave flight board with metal end caps",
   },
 ];
 

@@ -8,7 +8,7 @@ export default function FinalCTA() {
       className="relative w-full overflow-hidden bg-espresso text-cream pt-24 lg:pt-28 pb-24 lg:pb-28"
     >
       <Image
-        src="/photos/img_5793.jpg"
+        src="/photos/composite-split/beshears-barrel-monogram.jpg"
         alt=""
         fill
         sizes="100vw"
