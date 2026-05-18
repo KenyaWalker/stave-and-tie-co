@@ -100,7 +100,7 @@ export default function Commission() {
             Send the idea when you&apos;re ready. We&apos;ll help make it clean, personal, and built to last.
           </p>
           <div className="mt-10 flex flex-col flex-wrap items-center justify-center gap-3 sm:flex-row lg:justify-start">
-            <a href="mailto:2justinwalker3@gmail.com?subject=Custom%20Order%20Inquiry" className="btn-gilt justify-center sm:min-w-56">
+            <a href="mailto:thestaveandtieco@gmail.com?subject=Custom%20Order%20Inquiry" className="btn-gilt justify-center sm:min-w-56">
               Start a Custom Piece <span aria-hidden>→</span>
             </a>
             {hasStripeDepositLink ? (

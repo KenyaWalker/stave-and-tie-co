@@ -28,7 +28,7 @@ const collections: Collection[] = [
     title: "Custom Barrel Head Art",
     subtitle:
       "Full-size reclaimed barrel heads engraved with family names, station logos, wedding details, business marks, military pieces, sports artwork, or personal designs.",
-    price: "Starting at $159.99",
+    price: "Starting at $125",
     cta: "Start a Barrel Head",
     supportingNote:
       "Best for statement wall art, firehouse gifts, home bars, wedding keepsakes, and custom family pieces.",

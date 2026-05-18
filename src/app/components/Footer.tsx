@@ -4,7 +4,7 @@ import { ETSY_SHOP_URL } from "../../lib/external-links";
 
 const TEL_HREF = "tel:+18596910852";
 const TEL_LABEL = "(859) 691-0852";
-const EMAIL = "2justinwalker3@gmail.com";
+const EMAIL = "thestaveandtieco@gmail.com";
 
 const navLinks: { href: string; label: string }[] = [
   { href: "/shop", label: "Shop" },

@@ -17,7 +17,7 @@ const products: Product[] = [
     cta: "Start a Barrel Head",
     name: "Custom Barrel Head",
     body: "Full-size barrel head art personalized with names, logos, dates, badges, or meaningful details.",
-    price: "Starting at $159.99",
+    price: "Starting at $125",
     src: "/photos/img_5927.jpg",
     alt: "Custom engraved bourbon barrel head wall art",
   },
@@ -36,8 +36,8 @@ const products: Product[] = [
     name: "Bourbon Flight Board",
     body: "A handcrafted tasting board made for home bars, gifts, gatherings, and slow pours.",
     price: "Starting at $39.99",
-    src: "/photos/flight-board-6098.png",
-    alt: "Handcrafted bourbon barrel stave flight board",
+    src: "/photos/flight-board-bottles.png",
+    alt: "Handcrafted bourbon barrel stave flight board with Glencairn glasses and premium bottles",
   },
 ];
 
