@@ -38,14 +38,14 @@ const collections: Collection[] = [
         detail: "Firehouse piece",
         src: "/photos/img_5927.jpg",
         alt: "Station One firehouse barrel head",
-        focus: "object-[50%_45%]",
+        focus: "object-[50%_48%]",
       },
       {
         name: "The Beshears",
         detail: "Wedding monogram",
-        src: "/photos/composite-split/beshears-barrel-monogram.jpg",
+        src: "/photos/img_5793.jpg",
         alt: "Beshears monogram barrel head",
-        focus: "object-[50%_45%]",
+        focus: "object-[50%_50%]",
       },
       {
         name: "Powered by Faith",
@@ -59,42 +59,42 @@ const collections: Collection[] = [
         detail: "Engine house",
         src: "/photos/img_6306.jpg",
         alt: "One Truck custom barrel head",
-        focus: "object-[50%_45%]",
+        focus: "object-[50%_48%]",
       },
       {
         name: "West Virginia 302",
         detail: "Department piece",
-        src: "/photos/composite-split/wv-302-department-emblem.jpg",
+        src: "/photos/img_6011.jpg",
         alt: "West Virginia department barrel head",
-        focus: "object-[50%_45%]",
+        focus: "object-[50%_50%]",
       },
       {
         name: "Kentucky Wildcats",
         detail: "Sports artwork",
-        src: "/photos/composite-split/kentucky-wildcats-barrel.jpg",
+        src: "/photos/img_6029.jpg",
         alt: "Kentucky Wildcats barrel head",
-        focus: "object-[50%_45%]",
+        focus: "object-[50%_50%]",
       },
       {
         name: "Reed",
         detail: "Wedding keepsake",
-        src: "/photos/composite-split/reed-barrel-monogram.jpg",
+        src: "/photos/img_6074.jpg",
         alt: "Reed wedding barrel head",
-        focus: "object-[50%_45%]",
+        focus: "object-[50%_50%]",
       },
       {
         name: "Agency seal",
         detail: "Institutional barrel head",
         src: "/photos/img_6009.jpg",
         alt: "Institutional seal engraved on bourbon barrel head",
-        focus: "object-[50%_45%]",
+        focus: "object-[50%_48%]",
       },
       {
         name: "Crew hand-off",
         detail: "Delivered barrel head",
         src: "/photos/img_6329.jpg",
         alt: "Paramedic with delivered custom barrel head",
-        focus: "object-[50%_30%]",
+        focus: "object-[50%_42%]",
       },
       {
         name: "Station 16",
@@ -133,7 +133,7 @@ const collections: Collection[] = [
         detail: "Customer space",
         src: "/video/hero-5641-poster.jpg",
         alt: "Stave coat rack installed in a customer home",
-        focus: "object-[50%_44%]",
+        focus: "object-[50%_46%]",
       },
     ],
   },
@@ -149,17 +149,10 @@ const collections: Collection[] = [
     pieces: [
       {
         name: "Bourbon Flight Board",
-        detail: "Core product",
-        src: "/photos/composite-split/flight-board-staves.jpg",
-        alt: "Handcrafted bourbon barrel flight board",
-        focus: "object-[50%_52%]",
-      },
-      {
-        name: "Mantel setup",
-        detail: "Bar or mantel",
-        src: "/video/fireplace-poster.jpg",
-        alt: "Bourbon flight board with bar glassware on a mantel",
-        focus: "object-[50%_60%]",
+        detail: "Tasting lineup",
+        src: "/photos/flight-board-bottles.png",
+        alt: "Barrel stave flight board with Glencairn glasses and bourbon bottles",
+        focus: "object-[50%_50%]",
       },
     ],
   },
@@ -247,7 +240,7 @@ export default function Lookbook() {
                           alt={piece.alt}
                           fill
                           sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 29vw, (min-width: 640px) 44vw, 78vw"
-                          className={`object-cover transition-transform duration-700 hover:scale-[1.03] ${piece.focus ?? ""}`}
+                          className={`object-cover origin-center scale-[0.93] transition-transform duration-700 hover:scale-[0.97] ${piece.focus ?? ""}`}
                         />
                         <div
                           className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/58 via-transparent to-transparent"

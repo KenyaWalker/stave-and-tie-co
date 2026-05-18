@@ -8,11 +8,11 @@ export default function FinalCTA() {
       className="relative w-full overflow-hidden bg-espresso text-cream pt-24 lg:pt-28 pb-24 lg:pb-28"
     >
       <Image
-        src="/photos/composite-split/beshears-barrel-monogram.jpg"
+        src="/photos/img_5793.jpg"
         alt=""
         fill
         sizes="100vw"
-        className="absolute inset-0 object-cover object-[50%_45%] opacity-40 contrast-[1.05] saturate-[1.05]"
+        className="absolute inset-0 origin-center scale-[0.94] object-cover object-[50%_50%] opacity-40 contrast-[1.05] saturate-[1.05]"
         aria-hidden
       />
       <div className="absolute inset-0 bg-gradient-to-b from-espresso/82 via-espresso/88 to-espresso" />

@@ -18,7 +18,7 @@ export default function OurStoryFamilyMontage() {
           src="/photos/our-story-family-line.png"
           alt="Speaking at the podium in Lexington Fire Department dress uniform"
           fill
-          className="object-cover object-[50%_42%] brightness-[0.88] saturate-[0.97]"
+          className="origin-center scale-[0.96] object-cover object-[50%_48%] brightness-[0.88] saturate-[0.97]"
           sizes="100vw"
           priority
         />

@@ -17,7 +17,7 @@ export default function OurStoryPageBody() {
                   src="/photos/our-story-hero.jpg"
                   alt="Lexington crew at the firehouse with Ladder 6"
                   fill
-                  className="object-cover object-[50%_45%]"
+                  className="origin-center scale-[0.95] object-cover object-[50%_48%]"
                   sizes="(min-width: 1024px) 48vw, 100vw"
                   priority
                 />
