@@ -154,6 +154,39 @@ const collections: Collection[] = [
         alt: "Barrel stave flight board with Glencairn glasses and bourbon bottles",
         focus: "object-[50%_50%]",
       },
+      {
+        name: "Stave tea light centerpiece",
+        detail: "Mantel & ambience",
+        src: "/photos/bourbon-stave-tealight-holders.png",
+        alt: "Reclaimed bourbon barrel stave tealight candle holders beside a vase of flowers",
+        focus: "object-[50%_52%]",
+      },
+    ],
+  },
+  {
+    id: "stave-serving-drinkware",
+    title: "Bourbon Stave Serving & Drinkware",
+    subtitle:
+      "Laser-engraved serving boards beside serious kitchen blocks, and powder-coated tumblers, ramblers, and bottles marked with crests, names, ranks, or your own artwork for the rig, locker room, or home bar.",
+    price: "Custom quote",
+    cta: "Start These Pieces",
+    supportingNote:
+      "Best for wedding and housewarming gifts, firehouse lockers, bourbon rooms, birthdays, groomsmen setups, or anything that deserves a crisp mark in wood or stainless.",
+    pieces: [
+      {
+        name: "Engraved serving board",
+        detail: "Bamboo · family mark",
+        src: "/photos/serving-board-walkers-bamboo.png",
+        alt: "Laser-engraved bamboo serving board with The Walkers and Est 2025 beside an end-grain butcher block",
+        focus: "object-[50%_50%]",
+      },
+      {
+        name: "Firehouse Ramblers lineup",
+        detail: "YETI · department crest",
+        src: "/photos/engraved-yeti-fire-dept-lineup.png",
+        alt: "Three engraved YETI Ramblers showing Lexington KY fire department logo and personalized names",
+        focus: "object-[50%_50%]",
+      },
     ],
   },
 ];

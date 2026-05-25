@@ -6,7 +6,7 @@ import PageHeader from "../components/PageHeader";
 export const metadata: Metadata = {
   title: "Shop | The Stave & Tie Co.",
   description:
-    "Browse custom barrel head art, bourbon stave coat racks, and flight boards handcrafted from reclaimed barrel wood.",
+    "Browse custom barrel head art, bourbon stave coat racks, flight boards, serving boards, and engraved drinkware handcrafted from reclaimed wood and steel.",
 };
 
 export default function ShopPage() {
@@ -16,7 +16,7 @@ export default function ShopPage() {
         variant="editorial"
         eyebrow="Shop the Work"
         title="Real pieces. Real wood. Made one at a time."
-        body="Browse barrel heads, stave racks, and flight boards from the bench — real pieces for homes, gifts, and gatherings. Every photo is shop work, not stock; use them as starting points for your own custom order."
+        body="Browse barrel heads, stave racks, flight boards, serving boards, and engraved cups from the bench — real pieces for homes, gifts, and gatherings. Every photo is shop work, not stock; use them as starting points for your own custom order."
       />
       <Lookbook />
 
