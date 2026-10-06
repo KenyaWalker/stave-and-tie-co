@@ -17,7 +17,7 @@ const products: Product[] = [
     cta: "Start a Barrel Head",
     name: "Custom Barrel Head",
     body: "Full-size barrel head art personalized with names, logos, dates, badges, or meaningful details.",
-    price: "Starting at $125",
+    price: "",
     src: "/photos/img_5927.jpg",
     alt: "Custom engraved bourbon barrel head wall art",
   },
@@ -89,7 +89,9 @@ export default function FeaturedProducts() {
                 <p className="mt-3 flex-1 text-[13.5px] font-light leading-[1.65] text-parchment/70">
                   {p.body}
                 </p>
-                <p className="mt-4 display text-[1.1rem] text-gilt-2">{p.price}</p>
+                {p.price ? (
+                  <p className="mt-4 display text-[1.1rem] text-gilt-2">{p.price}</p>
+                ) : null}
                 <Link href={p.href} className="btn-gilt mt-5 justify-center w-full text-[11px] tracking-[0.18em]">
                   {p.cta} <span aria-hidden>→</span>
                 </Link>

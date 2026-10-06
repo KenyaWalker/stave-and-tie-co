@@ -28,7 +28,7 @@ const collections: Collection[] = [
     title: "Custom Barrel Head Art",
     subtitle:
       "Full-size reclaimed barrel heads engraved with family names, station logos, wedding details, business marks, military pieces, sports artwork, or personal designs.",
-    price: "Starting at $125",
+    price: "",
     cta: "Start a Barrel Head",
     supportingNote:
       "Best for statement wall art, firehouse gifts, home bars, wedding keepsakes, and custom family pieces.",
@@ -222,9 +222,11 @@ export default function Lookbook() {
                     <h3 className="display text-[clamp(1.45rem,3.1vw,2.35rem)] leading-[1.08] text-cream">
                       {collection.title}
                     </h3>
-                    <span className="inline-flex items-center border border-gilt/60 bg-[#1d120a] px-3 py-1 text-[12px] tracking-[0.08em] uppercase text-gilt-2">
-                      {collection.price}
-                    </span>
+                    {collection.price ? (
+                      <span className="inline-flex items-center border border-gilt/60 bg-[#1d120a] px-3 py-1 text-[12px] tracking-[0.08em] uppercase text-gilt-2">
+                        {collection.price}
+                      </span>
+                    ) : null}
                   </div>
                   <p className="mt-2 text-[13px] font-light leading-[1.72] text-parchment/72 lg:text-[14px]">{collection.subtitle}</p>
                   <p className="mt-4 max-w-[52ch] text-[13px] font-light leading-[1.65] text-parchment/60">
